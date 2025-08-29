@@ -1,0 +1,294 @@
++ source /dss/dsshome1/0D/ru47tac2/.bashrc
++++ /dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda shell.bash hook
+++ __conda_setup='export CONDA_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python'\''
+
+# Copyright (C) 2012 Anaconda, Inc
+# SPDX-License-Identifier: BSD-3-Clause
+__conda_exe() (
+    if [ -n "${_CE_M:+x}" ] && [ -n "${_CE_CONDA:+x}" ]; then
+        # only use _CE_M/_CE_CONDA when defined to avoid issues when run with `set -u`
+        "$CONDA_EXE" $_CE_M $_CE_CONDA "$@"
+    else
+        "$CONDA_EXE" "$@"
+    fi
+)
+
+__conda_hashr() {
+    if [ -n "${ZSH_VERSION:+x}" ]; then
+        \rehash
+    elif [ -n "${POSH_VERSION:+x}" ]; then
+        :  # pass
+    else
+        \hash -r
+    fi
+}
+
+__conda_activate() {
+    if [ -n "${CONDA_PS1_BACKUP:+x}" ]; then
+        # Handle transition from shell activated with conda <= 4.3 to a subsequent activation
+        # after conda updated to >= 4.4. See issue #6173.
+        PS1="$CONDA_PS1_BACKUP"
+        \unset CONDA_PS1_BACKUP
+    fi
+    \local ask_conda
+    ask_conda="$(PS1="${PS1:-}" __conda_exe shell.posix "$@")" || \return
+    \eval "$ask_conda"
+    __conda_hashr
+}
+
+__conda_reactivate() {
+    # FUTURE: conda 25.9, remove this function
+    echo "'\''__conda_reactivate'\'' is deprecated and will be removed in 25.9. Use '\''__conda_activate reactivate'\'' instead." 1>&2
+    __conda_activate reactivate
+}
+
+conda() {
+    \local cmd="${1-__missing__}"
+    case "$cmd" in
+        activate|deactivate)
+            __conda_activate "$@"
+            ;;
+        install|update|upgrade|remove|uninstall)
+            __conda_exe "$@" || \return
+            __conda_activate reactivate
+            ;;
+        *)
+            __conda_exe "$@"
+            ;;
+    esac
+}
+
+if [ -z "${CONDA_SHLVL+x}" ]; then
+    \export CONDA_SHLVL=0
+    # In dev-mode CONDA_EXE is python.exe and on Windows
+    # it is in a different relative location to condabin.
+    if [ -n "${_CE_CONDA:+x}" ] && [ -n "${WINDIR+x}" ]; then
+        PATH="$(\dirname "$CONDA_EXE")/condabin${PATH:+":${PATH}"}"
+    else
+        PATH="$(\dirname "$(\dirname "$CONDA_EXE")")/condabin${PATH:+":${PATH}"}"
+    fi
+    \export PATH
+
+    # We'\''re not allowing PS1 to be unbound. It must at least be set.
+    # However, we'\''re not exporting it, which can cause problems when starting a second shell
+    # via a first shell (i.e. starting zsh from bash).
+    if [ -z "${PS1+x}" ]; then
+        PS1=
+    fi
+fi
+
+conda activate base'
+++ '[' 0 -eq 0 ']'
+++ eval 'export CONDA_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python'\''
+
+# Copyright (C) 2012 Anaconda, Inc
+# SPDX-License-Identifier: BSD-3-Clause
+__conda_exe() (
+    if [ -n "${_CE_M:+x}" ] && [ -n "${_CE_CONDA:+x}" ]; then
+        # only use _CE_M/_CE_CONDA when defined to avoid issues when run with `set -u`
+        "$CONDA_EXE" $_CE_M $_CE_CONDA "$@"
+    else
+        "$CONDA_EXE" "$@"
+    fi
+)
+
+__conda_hashr() {
+    if [ -n "${ZSH_VERSION:+x}" ]; then
+        \rehash
+    elif [ -n "${POSH_VERSION:+x}" ]; then
+        :  # pass
+    else
+        \hash -r
+    fi
+}
+
+__conda_activate() {
+    if [ -n "${CONDA_PS1_BACKUP:+x}" ]; then
+        # Handle transition from shell activated with conda <= 4.3 to a subsequent activation
+        # after conda updated to >= 4.4. See issue #6173.
+        PS1="$CONDA_PS1_BACKUP"
+        \unset CONDA_PS1_BACKUP
+    fi
+    \local ask_conda
+    ask_conda="$(PS1="${PS1:-}" __conda_exe shell.posix "$@")" || \return
+    \eval "$ask_conda"
+    __conda_hashr
+}
+
+__conda_reactivate() {
+    # FUTURE: conda 25.9, remove this function
+    echo "'\''__conda_reactivate'\'' is deprecated and will be removed in 25.9. Use '\''__conda_activate reactivate'\'' instead." 1>&2
+    __conda_activate reactivate
+}
+
+conda() {
+    \local cmd="${1-__missing__}"
+    case "$cmd" in
+        activate|deactivate)
+            __conda_activate "$@"
+            ;;
+        install|update|upgrade|remove|uninstall)
+            __conda_exe "$@" || \return
+            __conda_activate reactivate
+            ;;
+        *)
+            __conda_exe "$@"
+            ;;
+    esac
+}
+
+if [ -z "${CONDA_SHLVL+x}" ]; then
+    \export CONDA_SHLVL=0
+    # In dev-mode CONDA_EXE is python.exe and on Windows
+    # it is in a different relative location to condabin.
+    if [ -n "${_CE_CONDA:+x}" ] && [ -n "${WINDIR+x}" ]; then
+        PATH="$(\dirname "$CONDA_EXE")/condabin${PATH:+":${PATH}"}"
+    else
+        PATH="$(\dirname "$(\dirname "$CONDA_EXE")")/condabin${PATH:+":${PATH}"}"
+    fi
+    \export PATH
+
+    # We'\''re not allowing PS1 to be unbound. It must at least be set.
+    # However, we'\''re not exporting it, which can cause problems when starting a second shell
+    # via a first shell (i.e. starting zsh from bash).
+    if [ -z "${PS1+x}" ]; then
+        PS1=
+    fi
+fi
+
+conda activate base'
++++ export CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
++++ CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
++++ '[' -z x ']'
++++ conda activate base
++++ local cmd=activate
++++ case "$cmd" in
++++ __conda_activate activate base
++++ '[' -n '' ']'
++++ local ask_conda
+++++ PS1=
+++++ __conda_exe shell.posix activate base
+++++ '[' -n '' ']'
+++++ /dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda shell.posix activate base
++++ ask_conda='unset _CE_M
+unset _CE_CONDA
+PS1='\''(base) '\''
+export PATH='\''/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-c306e94f98122556ca081f527b466015e1bc37b0/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts'\''
+export CONDA_PREFIX='\''/dss/dsshome1/0D/ru47tac2/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2'\''
+export CONDA_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python'\'''
++++ eval 'unset _CE_M
+unset _CE_CONDA
+PS1='\''(base) '\''
+export PATH='\''/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-c306e94f98122556ca081f527b466015e1bc37b0/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts'\''
+export CONDA_PREFIX='\''/dss/dsshome1/0D/ru47tac2/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2'\''
+export CONDA_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python'\'''
+++++ unset _CE_M
+++++ unset _CE_CONDA
+++++ PS1='(base) '
+++++ export PATH=/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-c306e94f98122556ca081f527b466015e1bc37b0/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts
+++++ PATH=/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-c306e94f98122556ca081f527b466015e1bc37b0/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts
+++++ export CONDA_PREFIX=/dss/dsshome1/0D/ru47tac2/miniconda3
+++++ CONDA_PREFIX=/dss/dsshome1/0D/ru47tac2/miniconda3
+++++ export CONDA_SHLVL=3
+++++ CONDA_SHLVL=3
+++++ export CONDA_DEFAULT_ENV=base
+++++ CONDA_DEFAULT_ENV=base
+++++ export 'CONDA_PROMPT_MODIFIER=(base) '
+++++ CONDA_PROMPT_MODIFIER='(base) '
+++++ export CONDA_PREFIX_2=/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2
+++++ CONDA_PREFIX_2=/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2
+++++ export CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
+++++ CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
+++++ export CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
+++++ CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
++++ __conda_hashr
++++ '[' -n '' ']'
++++ '[' -n '' ']'
++++ hash -r
+++ unset __conda_setup
++ conda activate nnunetv2
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate nnunetv2
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate nnunetv2
+++ '[' -n '' ']'
+++ /dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda shell.posix activate nnunetv2
++ ask_conda='unset _CE_M
+unset _CE_CONDA
+PS1='\''(nnunetv2) '\''
+export PATH='\''/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-c306e94f98122556ca081f527b466015e1bc37b0/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts'\''
+export CONDA_PREFIX='\''/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''nnunetv2'\''
+export CONDA_PROMPT_MODIFIER='\''(nnunetv2) '\''
+export CONDA_PREFIX_3='\''/dss/dsshome1/0D/ru47tac2/miniconda3'\''
+export CONDA_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python'\'''
++ eval 'unset _CE_M
+unset _CE_CONDA
+PS1='\''(nnunetv2) '\''
+export PATH='\''/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-c306e94f98122556ca081f527b466015e1bc37b0/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts'\''
+export CONDA_PREFIX='\''/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''nnunetv2'\''
+export CONDA_PROMPT_MODIFIER='\''(nnunetv2) '\''
+export CONDA_PREFIX_3='\''/dss/dsshome1/0D/ru47tac2/miniconda3'\''
+export CONDA_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python'\'''
+++ unset _CE_M
+++ unset _CE_CONDA
+++ PS1='(nnunetv2) '
+++ export PATH=/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-c306e94f98122556ca081f527b466015e1bc37b0/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts
+++ PATH=/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-c306e94f98122556ca081f527b466015e1bc37b0/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts
+++ export CONDA_PREFIX=/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2
+++ CONDA_PREFIX=/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2
+++ export CONDA_SHLVL=4
+++ CONDA_SHLVL=4
+++ export CONDA_DEFAULT_ENV=nnunetv2
+++ CONDA_DEFAULT_ENV=nnunetv2
+++ export 'CONDA_PROMPT_MODIFIER=(nnunetv2) '
+++ CONDA_PROMPT_MODIFIER='(nnunetv2) '
+++ export CONDA_PREFIX_3=/dss/dsshome1/0D/ru47tac2/miniconda3
+++ CONDA_PREFIX_3=/dss/dsshome1/0D/ru47tac2/miniconda3
+++ export CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
+++ CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
+++ export CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ export nnUNet_raw=/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnUNet_raw_data_base/nnUNet_raw_data
++ nnUNet_raw=/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnUNet_raw_data_base/nnUNet_raw_data
++ export nnUNet_preprocessed=/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_data/nnUNet_preprocessed
++ nnUNet_preprocessed=/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_data/nnUNet_preprocessed
++ export nnUNet_results=/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_data/nnUNet_results
++ nnUNet_results=/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_data/nnUNet_results
++ INPUT_DIR=/dss/dsshome1/0D/ru47tac2/projects/segrap2025/validation_data/team_name/Task01_results
++ OUTPUT_DIR=/dss/dsshome1/0D/ru47tac2/projects/segrap2025/predictions_ensemble
++ nnUNetv2_predict -d 201 -c 3d_fullres -f all -i /dss/dsshome1/0D/ru47tac2/projects/segrap2025/validation_data/team_name/Task01_results -o /dss/dsshome1/0D/ru47tac2/projects/segrap2025/predictions_ensemble --save_probabilities

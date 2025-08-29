@@ -1,0 +1,13 @@
+  0%|          | 0/48 [00:00<?, ?it/s]  0%|          | 0/48 [00:07<?, ?it/s]
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 872, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 755, in main
+    trainer.train()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 576, in train
+    epoch_loss, epoch_iou, epoch_dice, pred_list = self.train_epoch(epoch, num_clicks)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 472, in train_epoch
+    epoch_dice += self.get_dice_score(prev_masks, gt3D)
+TypeError: unsupported operand type(s) for +=: 'int' and 'builtin_function_or_method'
+FATAL: exception not rethrown
+/var/lib/slurm-llnl/slurmd/job5239508/slurm_script: line 23: 1579395 Aborted                 (core dumped) python train.py --task_name segrap2025task1 --work_dir results --checkpoint ckpt/sam_med3d_turbo.pth --run_cv

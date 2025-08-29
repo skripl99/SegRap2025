@@ -1,0 +1,8 @@
+
+=== Starting Training ===
+Model: vit_b_ori
+Batch size: 1
+Initial LR: 4e-05
+Training samples: 1
+
+Loaded checkpoint from ckpt/sam_med3d_turbo.pth (epoch 0)

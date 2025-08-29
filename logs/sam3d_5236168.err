@@ -1,0 +1,17 @@
+/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torch/utils/data/dataloader.py:624: UserWarning: This DataLoader will create 24 worker processes in total. Our suggested max number of worker in current system is 16, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+  0%|          | 0/60 [00:00<?, ?it/s]  0%|          | 0/60 [00:21<?, ?it/s]
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 603, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 563, in main
+    trainer.train()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 472, in train
+    epoch_loss, epoch_iou, epoch_dice, pred_list = self.train_epoch(epoch, num_clicks)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 410, in train_epoch
+    prev_masks, loss = self.interaction(sam_model,
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 326, in interaction
+    low_res_masks, prev_masks = self.batch_forward(sam_model,
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 279, in batch_forward
+    nib.save(pred_nii, f"debug_masks/pred_mask_step{step}.nii.gz")
+NameError: name 'step' is not defined. Did you mean: 'setup'?

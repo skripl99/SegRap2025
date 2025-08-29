@@ -1,0 +1,13 @@
+dataset: seg_rap_2025
+task_name: segrap_gtv
+dataroot: /home/ru47tac2/projects/segrap2025/data
+train_dir: imagesTr
+label_dir: labelsTr
+fold: 0
+
+training:
+  batch_size: 2
+  epochs: 100
+  lr: 0.0001
+  val_interval: 10
+  output_dir: /home/ru47tac2/projects/segrap2025/outputs

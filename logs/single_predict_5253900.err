@@ -1,0 +1,301 @@
++ source /dss/dsshome1/0D/ru47tac2/.bashrc
++++ /dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda shell.bash hook
+++ __conda_setup='export CONDA_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python'\''
+
+# Copyright (C) 2012 Anaconda, Inc
+# SPDX-License-Identifier: BSD-3-Clause
+__conda_exe() (
+    if [ -n "${_CE_M:+x}" ] && [ -n "${_CE_CONDA:+x}" ]; then
+        # only use _CE_M/_CE_CONDA when defined to avoid issues when run with `set -u`
+        "$CONDA_EXE" $_CE_M $_CE_CONDA "$@"
+    else
+        "$CONDA_EXE" "$@"
+    fi
+)
+
+__conda_hashr() {
+    if [ -n "${ZSH_VERSION:+x}" ]; then
+        \rehash
+    elif [ -n "${POSH_VERSION:+x}" ]; then
+        :  # pass
+    else
+        \hash -r
+    fi
+}
+
+__conda_activate() {
+    if [ -n "${CONDA_PS1_BACKUP:+x}" ]; then
+        # Handle transition from shell activated with conda <= 4.3 to a subsequent activation
+        # after conda updated to >= 4.4. See issue #6173.
+        PS1="$CONDA_PS1_BACKUP"
+        \unset CONDA_PS1_BACKUP
+    fi
+    \local ask_conda
+    ask_conda="$(PS1="${PS1:-}" __conda_exe shell.posix "$@")" || \return
+    \eval "$ask_conda"
+    __conda_hashr
+}
+
+__conda_reactivate() {
+    # FUTURE: conda 25.9, remove this function
+    echo "'\''__conda_reactivate'\'' is deprecated and will be removed in 25.9. Use '\''__conda_activate reactivate'\'' instead." 1>&2
+    __conda_activate reactivate
+}
+
+conda() {
+    \local cmd="${1-__missing__}"
+    case "$cmd" in
+        activate|deactivate)
+            __conda_activate "$@"
+            ;;
+        install|update|upgrade|remove|uninstall)
+            __conda_exe "$@" || \return
+            __conda_activate reactivate
+            ;;
+        *)
+            __conda_exe "$@"
+            ;;
+    esac
+}
+
+if [ -z "${CONDA_SHLVL+x}" ]; then
+    \export CONDA_SHLVL=0
+    # In dev-mode CONDA_EXE is python.exe and on Windows
+    # it is in a different relative location to condabin.
+    if [ -n "${_CE_CONDA:+x}" ] && [ -n "${WINDIR+x}" ]; then
+        PATH="$(\dirname "$CONDA_EXE")/condabin${PATH:+":${PATH}"}"
+    else
+        PATH="$(\dirname "$(\dirname "$CONDA_EXE")")/condabin${PATH:+":${PATH}"}"
+    fi
+    \export PATH
+
+    # We'\''re not allowing PS1 to be unbound. It must at least be set.
+    # However, we'\''re not exporting it, which can cause problems when starting a second shell
+    # via a first shell (i.e. starting zsh from bash).
+    if [ -z "${PS1+x}" ]; then
+        PS1=
+    fi
+fi
+
+conda activate base'
+++ '[' 0 -eq 0 ']'
+++ eval 'export CONDA_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python'\''
+
+# Copyright (C) 2012 Anaconda, Inc
+# SPDX-License-Identifier: BSD-3-Clause
+__conda_exe() (
+    if [ -n "${_CE_M:+x}" ] && [ -n "${_CE_CONDA:+x}" ]; then
+        # only use _CE_M/_CE_CONDA when defined to avoid issues when run with `set -u`
+        "$CONDA_EXE" $_CE_M $_CE_CONDA "$@"
+    else
+        "$CONDA_EXE" "$@"
+    fi
+)
+
+__conda_hashr() {
+    if [ -n "${ZSH_VERSION:+x}" ]; then
+        \rehash
+    elif [ -n "${POSH_VERSION:+x}" ]; then
+        :  # pass
+    else
+        \hash -r
+    fi
+}
+
+__conda_activate() {
+    if [ -n "${CONDA_PS1_BACKUP:+x}" ]; then
+        # Handle transition from shell activated with conda <= 4.3 to a subsequent activation
+        # after conda updated to >= 4.4. See issue #6173.
+        PS1="$CONDA_PS1_BACKUP"
+        \unset CONDA_PS1_BACKUP
+    fi
+    \local ask_conda
+    ask_conda="$(PS1="${PS1:-}" __conda_exe shell.posix "$@")" || \return
+    \eval "$ask_conda"
+    __conda_hashr
+}
+
+__conda_reactivate() {
+    # FUTURE: conda 25.9, remove this function
+    echo "'\''__conda_reactivate'\'' is deprecated and will be removed in 25.9. Use '\''__conda_activate reactivate'\'' instead." 1>&2
+    __conda_activate reactivate
+}
+
+conda() {
+    \local cmd="${1-__missing__}"
+    case "$cmd" in
+        activate|deactivate)
+            __conda_activate "$@"
+            ;;
+        install|update|upgrade|remove|uninstall)
+            __conda_exe "$@" || \return
+            __conda_activate reactivate
+            ;;
+        *)
+            __conda_exe "$@"
+            ;;
+    esac
+}
+
+if [ -z "${CONDA_SHLVL+x}" ]; then
+    \export CONDA_SHLVL=0
+    # In dev-mode CONDA_EXE is python.exe and on Windows
+    # it is in a different relative location to condabin.
+    if [ -n "${_CE_CONDA:+x}" ] && [ -n "${WINDIR+x}" ]; then
+        PATH="$(\dirname "$CONDA_EXE")/condabin${PATH:+":${PATH}"}"
+    else
+        PATH="$(\dirname "$(\dirname "$CONDA_EXE")")/condabin${PATH:+":${PATH}"}"
+    fi
+    \export PATH
+
+    # We'\''re not allowing PS1 to be unbound. It must at least be set.
+    # However, we'\''re not exporting it, which can cause problems when starting a second shell
+    # via a first shell (i.e. starting zsh from bash).
+    if [ -z "${PS1+x}" ]; then
+        PS1=
+    fi
+fi
+
+conda activate base'
++++ export CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
++++ CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
++++ '[' -z x ']'
++++ conda activate base
++++ local cmd=activate
++++ case "$cmd" in
++++ __conda_activate activate base
++++ '[' -n '' ']'
++++ local ask_conda
+++++ PS1=
+++++ __conda_exe shell.posix activate base
+++++ '[' -n '' ']'
+++++ /dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda shell.posix activate base
++++ ask_conda='unset _CE_M
+unset _CE_CONDA
+PS1='\''(base) '\''
+export PATH='\''/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-c306e94f98122556ca081f527b466015e1bc37b0/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts'\''
+export CONDA_PREFIX='\''/dss/dsshome1/0D/ru47tac2/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2'\''
+export CONDA_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python'\'''
++++ eval 'unset _CE_M
+unset _CE_CONDA
+PS1='\''(base) '\''
+export PATH='\''/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-c306e94f98122556ca081f527b466015e1bc37b0/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts'\''
+export CONDA_PREFIX='\''/dss/dsshome1/0D/ru47tac2/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2'\''
+export CONDA_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python'\'''
+++++ unset _CE_M
+++++ unset _CE_CONDA
+++++ PS1='(base) '
+++++ export PATH=/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-c306e94f98122556ca081f527b466015e1bc37b0/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts
+++++ PATH=/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-c306e94f98122556ca081f527b466015e1bc37b0/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts
+++++ export CONDA_PREFIX=/dss/dsshome1/0D/ru47tac2/miniconda3
+++++ CONDA_PREFIX=/dss/dsshome1/0D/ru47tac2/miniconda3
+++++ export CONDA_SHLVL=3
+++++ CONDA_SHLVL=3
+++++ export CONDA_DEFAULT_ENV=base
+++++ CONDA_DEFAULT_ENV=base
+++++ export 'CONDA_PROMPT_MODIFIER=(base) '
+++++ CONDA_PROMPT_MODIFIER='(base) '
+++++ export CONDA_PREFIX_2=/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2
+++++ CONDA_PREFIX_2=/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2
+++++ export CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
+++++ CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
+++++ export CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
+++++ CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
++++ __conda_hashr
++++ '[' -n '' ']'
++++ '[' -n '' ']'
++++ hash -r
+++ unset __conda_setup
++ conda activate nnunetv2
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate nnunetv2
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate nnunetv2
+++ '[' -n '' ']'
+++ /dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda shell.posix activate nnunetv2
++ ask_conda='unset _CE_M
+unset _CE_CONDA
+PS1='\''(nnunetv2) '\''
+export PATH='\''/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-c306e94f98122556ca081f527b466015e1bc37b0/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts'\''
+export CONDA_PREFIX='\''/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''nnunetv2'\''
+export CONDA_PROMPT_MODIFIER='\''(nnunetv2) '\''
+export CONDA_PREFIX_3='\''/dss/dsshome1/0D/ru47tac2/miniconda3'\''
+export CONDA_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python'\'''
++ eval 'unset _CE_M
+unset _CE_CONDA
+PS1='\''(nnunetv2) '\''
+export PATH='\''/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-c306e94f98122556ca081f527b466015e1bc37b0/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts'\''
+export CONDA_PREFIX='\''/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''nnunetv2'\''
+export CONDA_PROMPT_MODIFIER='\''(nnunetv2) '\''
+export CONDA_PREFIX_3='\''/dss/dsshome1/0D/ru47tac2/miniconda3'\''
+export CONDA_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python'\'''
+++ unset _CE_M
+++ unset _CE_CONDA
+++ PS1='(nnunetv2) '
+++ export PATH=/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-c306e94f98122556ca081f527b466015e1bc37b0/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts
+++ PATH=/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-c306e94f98122556ca081f527b466015e1bc37b0/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts
+++ export CONDA_PREFIX=/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2
+++ CONDA_PREFIX=/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2
+++ export CONDA_SHLVL=4
+++ CONDA_SHLVL=4
+++ export CONDA_DEFAULT_ENV=nnunetv2
+++ CONDA_DEFAULT_ENV=nnunetv2
+++ export 'CONDA_PROMPT_MODIFIER=(nnunetv2) '
+++ CONDA_PROMPT_MODIFIER='(nnunetv2) '
+++ export CONDA_PREFIX_3=/dss/dsshome1/0D/ru47tac2/miniconda3
+++ CONDA_PREFIX_3=/dss/dsshome1/0D/ru47tac2/miniconda3
+++ export CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
+++ CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
+++ export CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ export nnUNet_raw=/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnUNet_raw_data_base/nnUNet_raw_data
++ nnUNet_raw=/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnUNet_raw_data_base/nnUNet_raw_data
++ export nnUNet_preprocessed=/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_data/nnUNet_preprocessed
++ nnUNet_preprocessed=/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_data/nnUNet_preprocessed
++ export nnUNet_results=/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_data/nnUNet_results
++ nnUNet_results=/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_data/nnUNet_results
++ IMAGES_TS=/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnUNet_raw_data_base/nnUNet_raw_data/Dataset201_SegRap2025Task1/imagesTs
++ TEMP_STORAGE=/dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images
++ OUTPUT_DIR=/dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_output_single14
++ mkdir -p /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images
++ mkdir -p /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_output_single14
++ find /dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnUNet_raw_data_base/nnUNet_raw_data/Dataset201_SegRap2025Task1/imagesTs -type f '!' -name SegRap_0014_0000.nii.gz -exec mv '{}' /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images ';'
++ nnUNetv2_predict -i /dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnUNet_raw_data_base/nnUNet_raw_data/Dataset201_SegRap2025Task1/imagesTs -o /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_output_single14 -d 201 -c 3d_fullres -f all
+  0%|          | 0/144 [00:00<?, ?it/s]  1%|          | 1/144 [00:03<09:18,  3.91s/it]  1%|▏         | 2/144 [00:04<03:57,  1.68s/it]  2%|▏         | 3/144 [00:04<02:21,  1.00s/it]  3%|▎         | 4/144 [00:04<01:35,  1.46it/s]  3%|▎         | 5/144 [00:04<01:10,  1.96it/s]  4%|▍         | 6/144 [00:04<00:55,  2.48it/s]  5%|▍         | 7/144 [00:05<00:46,  2.97it/s]  6%|▌         | 8/144 [00:05<00:39,  3.42it/s]  6%|▋         | 9/144 [00:05<00:35,  3.80it/s]  7%|▋         | 10/144 [00:05<00:32,  4.11it/s]  8%|▊         | 11/144 [00:05<00:30,  4.36it/s]  8%|▊         | 12/144 [00:06<00:29,  4.54it/s]  9%|▉         | 13/144 [00:06<00:27,  4.68it/s] 10%|▉         | 14/144 [00:06<00:27,  4.79it/s] 10%|█         | 15/144 [00:06<00:26,  4.86it/s] 11%|█         | 16/144 [00:06<00:26,  4.91it/s] 12%|█▏        | 17/144 [00:06<00:25,  4.95it/s] 12%|█▎        | 18/144 [00:07<00:25,  4.98it/s] 13%|█▎        | 19/144 [00:07<00:25,  4.99it/s] 14%|█▍        | 20/144 [00:07<00:24,  5.01it/s] 15%|█▍        | 21/144 [00:07<00:24,  5.02it/s] 15%|█▌        | 22/144 [00:07<00:24,  5.02it/s] 16%|█▌        | 23/144 [00:08<00:24,  5.03it/s] 17%|█▋        | 24/144 [00:08<00:23,  5.03it/s] 17%|█▋        | 25/144 [00:08<00:23,  5.03it/s] 18%|█▊        | 26/144 [00:08<00:23,  5.03it/s] 19%|█▉        | 27/144 [00:08<00:23,  5.04it/s] 19%|█▉        | 28/144 [00:09<00:23,  5.04it/s] 20%|██        | 29/144 [00:09<00:22,  5.04it/s] 21%|██        | 30/144 [00:09<00:22,  5.04it/s] 22%|██▏       | 31/144 [00:09<00:22,  5.04it/s] 22%|██▏       | 32/144 [00:09<00:22,  5.04it/s] 23%|██▎       | 33/144 [00:10<00:22,  5.04it/s] 24%|██▎       | 34/144 [00:10<00:21,  5.04it/s] 24%|██▍       | 35/144 [00:10<00:21,  5.04it/s] 25%|██▌       | 36/144 [00:10<00:21,  5.04it/s] 26%|██▌       | 37/144 [00:10<00:21,  5.04it/s] 26%|██▋       | 38/144 [00:11<00:21,  5.04it/s] 27%|██▋       | 39/144 [00:11<00:20,  5.04it/s] 28%|██▊       | 40/144 [00:11<00:20,  5.04it/s] 28%|██▊       | 41/144 [00:11<00:20,  5.04it/s] 29%|██▉       | 42/144 [00:11<00:20,  5.04it/s] 30%|██▉       | 43/144 [00:12<00:20,  5.04it/s] 31%|███       | 44/144 [00:12<00:19,  5.04it/s] 31%|███▏      | 45/144 [00:12<00:19,  5.04it/s] 32%|███▏      | 46/144 [00:12<00:19,  5.04it/s] 33%|███▎      | 47/144 [00:12<00:19,  5.04it/s] 33%|███▎      | 48/144 [00:13<00:19,  5.04it/s] 34%|███▍      | 49/144 [00:13<00:18,  5.04it/s] 35%|███▍      | 50/144 [00:13<00:18,  5.04it/s] 35%|███▌      | 51/144 [00:13<00:18,  5.04it/s] 36%|███▌      | 52/144 [00:13<00:18,  5.04it/s] 37%|███▋      | 53/144 [00:14<00:18,  5.04it/s] 38%|███▊      | 54/144 [00:14<00:17,  5.04it/s] 38%|███▊      | 55/144 [00:14<00:17,  5.04it/s] 39%|███▉      | 56/144 [00:14<00:17,  5.04it/s] 40%|███▉      | 57/144 [00:14<00:17,  5.04it/s] 40%|████      | 58/144 [00:15<00:17,  5.04it/s] 41%|████      | 59/144 [00:15<00:16,  5.04it/s] 42%|████▏     | 60/144 [00:15<00:16,  5.04it/s] 42%|████▏     | 61/144 [00:15<00:16,  5.04it/s] 43%|████▎     | 62/144 [00:15<00:16,  5.04it/s] 44%|████▍     | 63/144 [00:16<00:16,  5.04it/s] 44%|████▍     | 64/144 [00:16<00:15,  5.04it/s] 45%|████▌     | 65/144 [00:16<00:15,  5.04it/s] 46%|████▌     | 66/144 [00:16<00:15,  5.04it/s] 47%|████▋     | 67/144 [00:16<00:15,  5.04it/s] 47%|████▋     | 68/144 [00:17<00:15,  5.04it/s] 48%|████▊     | 69/144 [00:17<00:14,  5.04it/s] 49%|████▊     | 70/144 [00:17<00:14,  5.04it/s] 49%|████▉     | 71/144 [00:17<00:14,  5.04it/s] 50%|█████     | 72/144 [00:17<00:14,  5.04it/s] 51%|█████     | 73/144 [00:18<00:14,  5.04it/s] 51%|█████▏    | 74/144 [00:18<00:13,  5.04it/s] 52%|█████▏    | 75/144 [00:18<00:13,  5.04it/s] 53%|█████▎    | 76/144 [00:18<00:13,  5.04it/s] 53%|█████▎    | 77/144 [00:18<00:13,  5.04it/s] 54%|█████▍    | 78/144 [00:19<00:13,  5.04it/s] 55%|█████▍    | 79/144 [00:19<00:12,  5.05it/s] 56%|█████▌    | 80/144 [00:19<00:12,  5.05it/s] 56%|█████▋    | 81/144 [00:19<00:12,  5.05it/s] 57%|█████▋    | 82/144 [00:19<00:12,  5.04it/s] 58%|█████▊    | 83/144 [00:20<00:12,  5.04it/s] 58%|█████▊    | 84/144 [00:20<00:11,  5.04it/s] 59%|█████▉    | 85/144 [00:20<00:11,  5.05it/s] 60%|█████▉    | 86/144 [00:20<00:11,  5.05it/s] 60%|██████    | 87/144 [00:20<00:11,  5.05it/s] 61%|██████    | 88/144 [00:21<00:11,  5.05it/s] 62%|██████▏   | 89/144 [00:21<00:10,  5.05it/s] 62%|██████▎   | 90/144 [00:21<00:10,  5.05it/s] 63%|██████▎   | 91/144 [00:21<00:10,  5.04it/s] 64%|██████▍   | 92/144 [00:21<00:10,  5.04it/s] 65%|██████▍   | 93/144 [00:22<00:10,  5.04it/s] 65%|██████▌   | 94/144 [00:22<00:09,  5.04it/s] 66%|██████▌   | 95/144 [00:22<00:09,  5.04it/s] 67%|██████▋   | 96/144 [00:22<00:09,  5.04it/s] 67%|██████▋   | 97/144 [00:22<00:09,  5.05it/s] 68%|██████▊   | 98/144 [00:23<00:09,  5.04it/s] 69%|██████▉   | 99/144 [00:23<00:08,  5.05it/s] 69%|██████▉   | 100/144 [00:23<00:08,  5.04it/s] 70%|███████   | 101/144 [00:23<00:08,  5.05it/s] 71%|███████   | 102/144 [00:23<00:08,  5.05it/s] 72%|███████▏  | 103/144 [00:24<00:08,  5.05it/s] 72%|███████▏  | 104/144 [00:24<00:07,  5.05it/s] 73%|███████▎  | 105/144 [00:24<00:07,  5.05it/s] 74%|███████▎  | 106/144 [00:24<00:07,  5.05it/s] 74%|███████▍  | 107/144 [00:24<00:07,  5.05it/s] 75%|███████▌  | 108/144 [00:25<00:07,  5.05it/s] 76%|███████▌  | 109/144 [00:25<00:06,  5.04it/s] 76%|███████▋  | 110/144 [00:25<00:06,  5.04it/s] 77%|███████▋  | 111/144 [00:25<00:06,  5.05it/s] 78%|███████▊  | 112/144 [00:25<00:06,  5.05it/s] 78%|███████▊  | 113/144 [00:26<00:06,  5.05it/s] 79%|███████▉  | 114/144 [00:26<00:05,  5.05it/s] 80%|███████▉  | 115/144 [00:26<00:05,  5.05it/s] 81%|████████  | 116/144 [00:26<00:05,  5.04it/s] 81%|████████▏ | 117/144 [00:26<00:05,  5.05it/s] 82%|████████▏ | 118/144 [00:27<00:05,  5.05it/s] 83%|████████▎ | 119/144 [00:27<00:04,  5.05it/s] 83%|████████▎ | 120/144 [00:27<00:04,  5.04it/s] 84%|████████▍ | 121/144 [00:27<00:04,  5.04it/s] 85%|████████▍ | 122/144 [00:27<00:04,  5.04it/s] 85%|████████▌ | 123/144 [00:28<00:04,  5.04it/s] 86%|████████▌ | 124/144 [00:28<00:03,  5.04it/s] 87%|████████▋ | 125/144 [00:28<00:03,  5.04it/s] 88%|████████▊ | 126/144 [00:28<00:03,  5.04it/s] 88%|████████▊ | 127/144 [00:28<00:03,  5.04it/s] 89%|████████▉ | 128/144 [00:29<00:03,  5.04it/s] 90%|████████▉ | 129/144 [00:29<00:02,  5.04it/s] 90%|█████████ | 130/144 [00:29<00:02,  5.04it/s] 91%|█████████ | 131/144 [00:29<00:02,  5.04it/s] 92%|█████████▏| 132/144 [00:29<00:02,  5.04it/s] 92%|█████████▏| 133/144 [00:30<00:02,  5.04it/s] 93%|█████████▎| 134/144 [00:30<00:01,  5.04it/s] 94%|█████████▍| 135/144 [00:30<00:01,  5.04it/s] 94%|█████████▍| 136/144 [00:30<00:01,  5.04it/s] 95%|█████████▌| 137/144 [00:30<00:01,  5.04it/s] 96%|█████████▌| 138/144 [00:30<00:01,  5.04it/s] 97%|█████████▋| 139/144 [00:31<00:00,  5.04it/s] 97%|█████████▋| 140/144 [00:31<00:00,  5.04it/s] 98%|█████████▊| 141/144 [00:31<00:00,  5.04it/s] 99%|█████████▊| 142/144 [00:31<00:00,  5.04it/s] 99%|█████████▉| 143/144 [00:31<00:00,  5.04it/s]100%|██████████| 144/144 [00:32<00:00,  5.04it/s]100%|██████████| 144/144 [00:32<00:00,  4.47it/s]
++ mv /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0001_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0002_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0003_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0004_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0005_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0006_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0007_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0008_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0009_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0010_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0011_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0012_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0013_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0015_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0016_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0017_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0018_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0019_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images/SegRap_0020_0000.nii.gz /dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnUNet_raw_data_base/nnUNet_raw_data/Dataset201_SegRap2025Task1/imagesTs
++ rmdir /dss/dsshome1/0D/ru47tac2/projects/segrap2025/tmp_moved_away_images

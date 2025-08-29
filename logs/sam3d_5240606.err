@@ -1,0 +1,13 @@
+Epoch 0:   0%|          | 0/120 [00:00<?, ?it/s]Epoch 0:   0%|          | 0/120 [00:09<?, ?it/s]
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 640, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 596, in main
+    trainer.train()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 507, in train
+    epoch_loss, epoch_dice, epoch_hd, epoch_nsd, epoch_dice_loss, epoch_ce_loss = self.train_epoch(epoch, np.random.randint(1, 21))
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 442, in train_epoch
+    prev_masks, loss, dice_loss, ce_loss = self.interaction(
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 331, in interaction
+    assert pred_probs.shape == gt_onehot.shape, \
+UnboundLocalError: local variable 'pred_probs' referenced before assignment

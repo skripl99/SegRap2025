@@ -1,0 +1,23 @@
+
+ DEBUG MODE AKTIVIERT
+Device: cuda, GPUs: [0, 1]
+Initial Learning Rate: 8e-05
+
+🔍 Test Dice Loss: 0.5000643730163574
+🔍 Test CE Loss: 0.7338322997093201
+
+Loaded checkpoint from ckpt/sam_med3d_turbo.pth (epoch 0)
+Epoch: 0/199
+Unique GT values before norm: tensor([  0., 255.], device='cuda:0')
+GT nach Norm: min=0.000, max=1.000
+
+=== NEW INTERACTION (clicks: 11) ===
+Initial GT sum: 320353.0
+
+ batch_forward - Input Shapes:
+Image Embedding: torch.Size([2, 384, 8, 8, 8])
+GT3D unique values: tensor([0., 1.], device='cuda:0')
+Raw masks min/max: -7.242, 5.965
+After sigmoid min/max: 0.001, 0.998
+Final prev_masks sum: 472610.625, GT sum: 320353.000
+

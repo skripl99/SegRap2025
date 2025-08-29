@@ -1,0 +1,19 @@
+[DEBUG] train_dataset length = 120
+No checkpoint found at /dss/dsshome1/0D/ru47tac2/projects/segrap2025/results/segrap_ft_resume/sam_model_latest.pth, start training from scratch
+Epoch: 0/199
+Epoch: 0, Step: 20, Loss: 0.09530458077788354, Dice: 0.0
+Epoch: 0, Step: 40, Loss: 0.0038499761023558675, Dice: 0.0
+Epoch: 0, Step: 60, Loss: -0.08364090555696749, Dice: 0.003882343415170908
+Epoch: 0, Step: 80, Loss: -0.10459921864676289, Dice: 0.05941983684897423
+Epoch: 0, Step: 100, Loss: -0.2488627251703292, Dice: 0.04561258479952812
+EPOCH: 0, Loss: -0.11109096556610894
+EPOCH: 0, Dice: 0.04548305912564198
+Epoch: 1/199
+Epoch: 1, Step: 20, Loss: -0.30249134371988473, Dice: 0.09540891647338867
+Epoch: 1, Step: 40, Loss: -0.3554847989231348, Dice: 0.07527630031108856
+Epoch: 1, Step: 60, Loss: -0.535907319188118, Dice: 0.06351523846387863
+Epoch: 1, Step: 80, Loss: -0.4955729261040688, Dice: 0.07236339896917343
+Epoch: 1, Step: 100, Loss: -0.5297489751130342, Dice: 0.14215432107448578
+EPOCH: 1, Loss: -0.5216171079548075
+EPOCH: 1, Dice: 0.0938723037019372
+Epoch: 2/199

@@ -1,0 +1,109 @@
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+
+There are 20 cases in the source folder
+I am processing 0 out of 1 (max process ID is 0, we start counting with 0!)
+There are 20 cases that I would like to predict
+
+Predicting SegRap_0001:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0001
+
+Predicting SegRap_0002:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0002
+
+Predicting SegRap_0003:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0003
+
+Predicting SegRap_0004:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0004
+
+Predicting SegRap_0005:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0005
+
+Predicting SegRap_0006:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0006
+
+Predicting SegRap_0007:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0007
+
+Predicting SegRap_0008:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0008
+
+Predicting SegRap_0009:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0009
+
+Predicting SegRap_0010:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0010
+
+Predicting SegRap_0011:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0011
+
+Predicting SegRap_0012:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0012
+
+Predicting SegRap_0013:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0013
+
+Predicting SegRap_0014:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0014
+
+Predicting SegRap_0015:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0015
+
+Predicting SegRap_0016:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0016
+
+Predicting SegRap_0017:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0017
+
+Predicting SegRap_0018:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0018
+
+Predicting SegRap_0019:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0019
+
+Predicting SegRap_0020:
+perform_everything_on_device: True
+sending off prediction to background worker for resampling and export
+done with SegRap_0020

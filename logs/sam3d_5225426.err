@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 18, in <module>
+    from monai.networks.utils import to_onehot
+ImportError: cannot import name 'to_onehot' from 'monai.networks.utils' (/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/site-packages/monai/networks/utils.py)

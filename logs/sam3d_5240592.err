@@ -1,0 +1,20 @@
+Epoch 0:   0%|          | 0/60 [00:00<?, ?it/s]Epoch 0:   0%|          | 0/60 [00:16<?, ?it/s]
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 636, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 592, in main
+    trainer.train()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 503, in train
+    epoch_loss, epoch_dice, epoch_hd, epoch_nsd, epoch_dice_loss, epoch_ce_loss = self.train_epoch(epoch, np.random.randint(1, 21))
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 424, in train_epoch
+    image3D = self.norm_transform(image3D.squeeze(1)).unsqueeze(1)
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torchio/transforms/transform.py", line 158, in __call__
+    transformed = self.apply_transform(subject)
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torchio/transforms/preprocessing/intensity/normalization_transform.py", line 50, in apply_transform
+    self.apply_normalization(subject, image_name, mask)
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torchio/transforms/preprocessing/intensity/rescale.py", line 90, in apply_normalization
+    image.set_data(self.rescale(image.data, mask, image_name))
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torchio/transforms/preprocessing/intensity/rescale.py", line 99, in rescale
+    array = tensor.clone().float().numpy()
+TypeError: can't convert cuda:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.
+/var/lib/slurm-llnl/slurmd/job5240592/slurm_script: line 23: 2303911 Aborted                 (core dumped) python train.py --task_name segrap2025task1 --work_dir results --checkpoint ckpt/sam_med3d_turbo.pth

@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.nii.gz
+*.npz
+*.npy
+*.pth
+*.tar
+*.zip
+*.log
+nnUNet_results/
+nnUNet_preprocessed/
+nnUNet_raw/
+output/
+resources/
+test/output/

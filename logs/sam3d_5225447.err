@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 602, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 568, in main
+    trainer = BaseTrainer(model, dataloaders, args)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 133, in __init__
+    self.set_loss_fn()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 145, in set_loss_fn
+    self.dice_fn = DiceLoss(sigmoid=True, to_onehot_y=False)  # aus monai.losses importieren
+NameError: name 'DiceLoss' is not defined. Did you mean: 'DiceCELoss'?

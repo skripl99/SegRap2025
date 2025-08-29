@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 669, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 621, in main
+    train_loader = get_dataloaders(args)  # Kein val_loader mehr
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 99, in get_dataloaders
+    gt3D = torch.clamp(gt3D, 0, 1)  # Konvertiert 3 Klassen → 2 Klassen
+UnboundLocalError: local variable 'gt3D' referenced before assignment

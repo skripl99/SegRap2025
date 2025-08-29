@@ -1,0 +1,32 @@
+/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+0it [00:00, ?it/s]0it [00:17, ?it/s]
+[rank0]:[W712 16:08:28.231421100 ProcessGroupNCCL.cpp:1479] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0712 16:08:29.276000 1783274 site-packages/torch/multiprocessing/spawn.py:169] Terminating process 1784170 via signal SIGTERM
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 532, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 488, in main
+    mp.spawn(main_worker, nprocs=args.world_size, args=(args, ))
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 340, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 296, in start_processes
+    while not context.join():
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 215, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 1 terminated with the following error:
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 90, in _wrap
+    fn(i, *args)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 518, in main_worker
+    trainer.train()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 419, in train
+    epoch_loss, epoch_iou, epoch_dice, pred_list = self.train_epoch(epoch, num_clicks)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 365, in train_epoch
+    epoch_loss /= step + 1
+UnboundLocalError: local variable 'step' referenced before assignment
+

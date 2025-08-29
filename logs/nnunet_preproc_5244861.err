@@ -1,0 +1,4 @@
++ conda activate nnunetv2
+
+CondaError: Run 'conda init' before 'conda activate'
+

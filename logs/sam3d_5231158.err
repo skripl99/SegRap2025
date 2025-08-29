@@ -1,0 +1,33 @@
+/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torch/utils/data/dataloader.py:624: UserWarning: This DataLoader will create 24 worker processes in total. Our suggested max number of worker in current system is 16, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+  0%|          | 0/10 [00:00<?, ?it/s]  0%|          | 0/10 [00:47<?, ?it/s]
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 548, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 508, in main
+    trainer.train()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 417, in train
+    epoch_loss, epoch_iou, epoch_dice, pred_list = self.train_epoch(epoch, num_clicks)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 349, in train_epoch
+    image_embedding = sam_model.image_encoder(image3D)
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/segment_anything/modeling/image_encoder3D.py", line 151, in forward
+    x = blk(x)
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/segment_anything/modeling/image_encoder3D.py", line 214, in forward
+    x = self.attn(x)
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/segment_anything/modeling/image_encoder3D.py", line 275, in forward
+    attn = add_decomposed_rel_pos(attn, q, self.rel_pos_d, self.rel_pos_h, self.rel_pos_w,
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/segment_anything/modeling/image_encoder3D.py", line 410, in add_decomposed_rel_pos
+    attn = (attn.view(B, q_d, q_h, q_w, k_d, k_h, k_w) + rel_d[:, :, :, :, None, None] +
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.02 GiB. GPU 0 has a total capacity of 39.39 GiB of which 904.31 MiB is free. Including non-PyTorch memory, this process has 38.50 GiB memory in use. Of the allocated memory 36.90 GiB is allocated by PyTorch, and 1.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

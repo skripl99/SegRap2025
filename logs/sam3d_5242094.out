@@ -1,0 +1,8 @@
+
+=== Starting Training ===
+Model: vit_b_ori
+Batch size: 1
+Initial LR: 4e-05
+Training samples: 1
+
+Fehler beim Modellaufbau: MaskDecoder3D.__init__() got an unexpected keyword argument 'num_classes'

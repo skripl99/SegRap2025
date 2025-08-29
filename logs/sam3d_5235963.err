@@ -1,0 +1,4 @@
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 321
+    dice_loss(sigmoi) = self.dice_loss_fn(prev_masks, gt3D)
+    ^^^^^^^^^^^^^^^^^
+SyntaxError: cannot assign to function call here. Maybe you meant '==' instead of '='?

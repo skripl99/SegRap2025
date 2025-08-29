@@ -1,0 +1,6 @@
+Loaded checkpoint from /dss/dsshome1/0D/ru47tac2/projects/segrap2025/results/segrap_ft_resume/sam_model_latest.pth (epoch 121)
+Epoch: 121/199
+Loaded checkpoint from /dss/dsshome1/0D/ru47tac2/projects/segrap2025/results/segrap_ft_resume/sam_model_latest.pth (epoch 121)
+Epoch: 121/199
+EPOCH: 121, Loss: 0.0
+EPOCH: 121, Dice: 0.0

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 646, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 599, in main
+    model = build_model(args)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 86, in build_model
+    original_mlp[-1].in_features,
+TypeError: 'MLP' object is not subscriptable

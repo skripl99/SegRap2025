@@ -1,0 +1,7 @@
+[DEBUG] train_dataset length = 120
+Loaded checkpoint from /dss/dsshome1/0D/ru47tac2/projects/segrap2025/results/segrap_ft_resume/sam_model_latest.pth (epoch 125)
+Epoch: 125/199
+Epoch: 125, Step: 20, Loss: -2.5411535263061524, Dice: 0.15280042588710785
+Epoch: 125, Step: 40, Loss: -2.2644081205129623, Dice: 0.10950542986392975
+EPOCH: 125, Loss: -2.5793093274037044
+EPOCH: 125, Dice: 0.16676804199814796

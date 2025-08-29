@@ -1,0 +1,30 @@
+/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torch/utils/data/dataloader.py:624: UserWarning: This DataLoader will create 24 worker processes in total. Our suggested max number of worker in current system is 16, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torch/nn/init.py:511: UserWarning: Initializing zero-element tensors is a no-op
+  warnings.warn("Initializing zero-element tensors is a no-op")
+/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torch/nn/init.py:565: UserWarning: Initializing zero-element tensors is a no-op
+  warnings.warn("Initializing zero-element tensors is a no-op")
+Epoch 0:   0%|          | 0/120 [00:00<?, ?it/s]Epoch 0:   0%|          | 0/120 [00:09<?, ?it/s]
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 668, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 624, in main
+    trainer.train()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 535, in train
+    epoch_loss, epoch_dice, epoch_hd, epoch_nsd, epoch_dice_loss, epoch_ce_loss = self.train_epoch(epoch, np.random.randint(1, 21))
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 449, in train_epoch
+    for step, data3D in enumerate(tbar):
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/prefetch_generator/__init__.py", line 112, in next
+    success, next_item = self.queue.get()
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/queue.py", line 171, in get
+    self.not_empty.wait()
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/threading.py", line 320, in wait
+    waiter.acquire()
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 2118551) is killed by signal: Killed. 
+terminate called after throwing an instance of 'std::system_error'
+  what():  Broken pipe
+slurmstepd: error: Detected 2 oom_kill events in StepId=5242730.batch. Some of the step tasks have been OOM Killed.

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 691, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 644, in main
+    model = build_model(args)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 99, in build_model
+    sam_model.mask_decoder.iou_prediction_head.in_features,
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1928, in __getattr__
+    raise AttributeError(
+AttributeError: 'MLP' object has no attribute 'in_features'

@@ -1,0 +1,100 @@
++ source /dss/dsshome1/0D/ru47tac2/miniconda3/etc/profile.d/conda.sh
+++ export CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
+++ CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
+++ '[' -z x ']'
++ conda init
++ local cmd=init
++ case "$cmd" in
++ __conda_exe init
++ '[' -n '' ']'
++ /dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda init
++ conda activate nnunetv2
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate nnunetv2
++ '[' -n '' ']'
++ local ask_conda
+++ PS1=
+++ __conda_exe shell.posix activate nnunetv2
+++ '[' -n '' ']'
+++ /dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda shell.posix activate nnunetv2
++ ask_conda='unset _CE_M
+unset _CE_CONDA
+PS1='\''(nnunetv2) '\''
+export PATH='\''/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_PROMPT_MODIFIER='\''(nnunetv2) '\''
+export CONDA_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python'\'''
++ eval 'unset _CE_M
+unset _CE_CONDA
+PS1='\''(nnunetv2) '\''
+export PATH='\''/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_PROMPT_MODIFIER='\''(nnunetv2) '\''
+export CONDA_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python'\'''
+++ unset _CE_M
+++ unset _CE_CONDA
+++ PS1='(nnunetv2) '
+++ export PATH=/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ PATH=/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ export CONDA_SHLVL=2
+++ CONDA_SHLVL=2
+++ export 'CONDA_PROMPT_MODIFIER=(nnunetv2) '
+++ CONDA_PROMPT_MODIFIER='(nnunetv2) '
+++ export CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
+++ CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
+++ export CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ nnUNetv2_plan_and_preprocess -d 201 -c 3d_fullres -np 1 --verify_dataset_integrity
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/lib/python3.10/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/lib/python3.10/multiprocessing/pool.py", line 51, in starmapstar
+    return list(itertools.starmap(args[0], args[1]))
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_repo/nnunetv2/experiment_planning/verify_dataset_integrity.py", line 31, in verify_labels
+    seg, properties = rw.read_seg(label_file)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_repo/nnunetv2/imageio/simpleitk_reader_writer.py", line 115, in read_seg
+    return self.read_images((seg_fname, ))
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_repo/nnunetv2/imageio/simpleitk_reader_writer.py", line 38, in read_images
+    itk_image = sitk.ReadImage(f)
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/lib/python3.10/site-packages/SimpleITK/extra.py", line 384, in ReadImage
+    return reader.Execute()
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/lib/python3.10/site-packages/SimpleITK/SimpleITK.py", line 8534, in Execute
+    return _SimpleITK.ImageFileReader_Execute(self)
+RuntimeError: Exception thrown in SimpleITK ImageFileReader_Execute: /tmp/SimpleITK/Code/IO/src/sitkImageReaderBase.cxx:99:
+sitk::ERROR: Unable to determine ImageIO reader for "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnUNet_raw_data_base/nnUNet_raw_data/Dataset201_SegRap2025Task1/labelsTr/segrap_0043.nii.gz"
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin/nnUNetv2_plan_and_preprocess", line 8, in <module>
+    sys.exit(plan_and_preprocess_entry())
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_repo/nnunetv2/experiment_planning/plan_and_preprocess_entrypoints.py", line 180, in plan_and_preprocess_entry
+    extract_fingerprints(args.d, args.fpe, args.npfp, args.verify_dataset_integrity, args.clean, args.verbose)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_repo/nnunetv2/experiment_planning/plan_and_preprocess_api.py", line 47, in extract_fingerprints
+    extract_fingerprint_dataset(d, fingerprint_extractor_class, num_processes, check_dataset_integrity, clean,
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_repo/nnunetv2/experiment_planning/plan_and_preprocess_api.py", line 30, in extract_fingerprint_dataset
+    verify_dataset_integrity(join(nnUNet_raw, dataset_name), num_processes)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_repo/nnunetv2/experiment_planning/verify_dataset_integrity.py", line 201, in verify_dataset_integrity
+    result = p.starmap(
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/lib/python3.10/multiprocessing/pool.py", line 375, in starmap
+    return self._map_async(func, iterable, starmapstar, chunksize).get()
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/lib/python3.10/multiprocessing/pool.py", line 774, in get
+    raise self._value
+RuntimeError: Exception thrown in SimpleITK ImageFileReader_Execute: /tmp/SimpleITK/Code/IO/src/sitkImageReaderBase.cxx:99:
+sitk::ERROR: Unable to determine ImageIO reader for "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnUNet_raw_data_base/nnUNet_raw_data/Dataset201_SegRap2025Task1/labelsTr/segrap_0043.nii.gz"

@@ -1,0 +1,7 @@
+
+=== Starting Training ===
+Model: vit_b_ori
+Batch size: 2
+Initial LR: 4e-05
+Training samples: 1
+

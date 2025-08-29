@@ -1,0 +1,13 @@
+usage: train.py [-h] [--task_name TASK_NAME] [--click_type CLICK_TYPE]
+                [--multi_click] [--model_type MODEL_TYPE]
+                [--checkpoint CHECKPOINT] [--device DEVICE]
+                [--work_dir WORK_DIR] [--data_dir DATA_DIR]
+                [--num_workers NUM_WORKERS] [--gpu_ids GPU_IDS [GPU_IDS ...]]
+                [--multi_gpu] [--resume] [--allow_partial_weight]
+                [--lr_scheduler {multisteplr,steplr,coswarm,linear}]
+                [--step_size STEP_SIZE [STEP_SIZE ...]] [--gamma GAMMA]
+                [--num_epochs NUM_EPOCHS] [--img_size IMG_SIZE]
+                [--batch_size BATCH_SIZE]
+                [--accumulation_steps ACCUMULATION_STEPS] [--lr LR]
+                [--weight_decay WEIGHT_DECAY] [--port PORT]
+train.py: error: unrecognized arguments: /dss/dsshome1/0D/ru47tac2/projects/segrap2025/results/segrap_ft_resume/sam_model_latest.pth

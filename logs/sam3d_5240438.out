@@ -1,0 +1,430 @@
+
+=== Starting Training ===
+Model: vit_b_ori
+Batch size: 2
+Initial LR: 4e-05
+Training samples: 1
+
+Loaded checkpoint from ckpt/sam_med3d_turbo.pth (epoch 0)
+
+Epoch 1/70:
+  Loss: 12.5488
+  Dice: 0.5146
+  Hausdorff Distance: 18.8538
+  NSD: 0.2874
+
+Epoch 2/70:
+  Loss: 8.4081
+  Dice: 0.6474
+  Hausdorff Distance: 12.8826
+  NSD: 0.3800
+
+Epoch 3/70:
+  Loss: 7.8840
+  Dice: 0.6715
+  Hausdorff Distance: 11.6082
+  NSD: 0.4064
+
+Epoch 4/70:
+  Loss: 7.3047
+  Dice: 0.6946
+  Hausdorff Distance: 10.3574
+  NSD: 0.4429
+
+Epoch 5/70:
+  Loss: 7.0130
+  Dice: 0.6999
+  Hausdorff Distance: 10.0347
+  NSD: 0.4450
+
+Epoch 6/70:
+  Loss: 6.9528
+  Dice: 0.6994
+  Hausdorff Distance: 10.1747
+  NSD: 0.4475
+
+Epoch 7/70:
+  Loss: 6.6690
+  Dice: 0.7134
+  Hausdorff Distance: 9.4647
+  NSD: 0.4676
+
+Epoch 8/70:
+  Loss: 6.7752
+  Dice: 0.7123
+  Hausdorff Distance: 9.7985
+  NSD: 0.4726
+
+Epoch 9/70:
+  Loss: 6.7279
+  Dice: 0.7222
+  Hausdorff Distance: 9.4937
+  NSD: 0.4989
+
+Epoch 10/70:
+  Loss: 6.4371
+  Dice: 0.7299
+  Hausdorff Distance: 8.8167
+  NSD: 0.5045
+
+Epoch 11/70:
+  Loss: 6.1132
+  Dice: 0.7287
+  Hausdorff Distance: 8.9079
+  NSD: 0.5108
+
+Epoch 12/70:
+  Loss: 6.2537
+  Dice: 0.7397
+  Hausdorff Distance: 8.6080
+  NSD: 0.5243
+
+Epoch 13/70:
+  Loss: 6.1206
+  Dice: 0.7396
+  Hausdorff Distance: 8.4382
+  NSD: 0.5239
+
+Epoch 14/70:
+  Loss: 6.0020
+  Dice: 0.7426
+  Hausdorff Distance: 8.4343
+  NSD: 0.5308
+
+Epoch 15/70:
+  Loss: 5.9899
+  Dice: 0.7487
+  Hausdorff Distance: 7.9907
+  NSD: 0.5380
+
+Epoch 16/70:
+  Loss: 5.8364
+  Dice: 0.7485
+  Hausdorff Distance: 7.9438
+  NSD: 0.5433
+
+Epoch 17/70:
+  Loss: 5.8300
+  Dice: 0.7474
+  Hausdorff Distance: 8.0510
+  NSD: 0.5354
+
+Epoch 18/70:
+  Loss: 5.8091
+  Dice: 0.7559
+  Hausdorff Distance: 7.7432
+  NSD: 0.5488
+
+Epoch 19/70:
+  Loss: 5.5579
+  Dice: 0.7596
+  Hausdorff Distance: 7.7960
+  NSD: 0.5588
+
+Epoch 20/70:
+  Loss: 5.6518
+  Dice: 0.7651
+  Hausdorff Distance: 7.3946
+  NSD: 0.5661
+
+Epoch 21/70:
+  Loss: 5.6245
+  Dice: 0.7592
+  Hausdorff Distance: 7.6619
+  NSD: 0.5587
+
+Epoch 22/70:
+  Loss: 5.5110
+  Dice: 0.7677
+  Hausdorff Distance: 7.7913
+  NSD: 0.5780
+
+Epoch 23/70:
+  Loss: 5.3036
+  Dice: 0.7809
+  Hausdorff Distance: 6.9902
+  NSD: 0.6059
+
+Epoch 24/70:
+  Loss: 5.4947
+  Dice: 0.7590
+  Hausdorff Distance: 7.7928
+  NSD: 0.5600
+
+Epoch 25/70:
+  Loss: 5.2206
+  Dice: 0.7780
+  Hausdorff Distance: 7.2678
+  NSD: 0.6069
+
+Epoch 26/70:
+  Loss: 5.2677
+  Dice: 0.7721
+  Hausdorff Distance: 7.0446
+  NSD: 0.5923
+
+Epoch 27/70:
+  Loss: 5.4526
+  Dice: 0.7765
+  Hausdorff Distance: 7.2937
+  NSD: 0.6035
+
+Epoch 28/70:
+  Loss: 5.3785
+  Dice: 0.7714
+  Hausdorff Distance: 7.2391
+  NSD: 0.5927
+
+Epoch 29/70:
+  Loss: 5.3257
+  Dice: 0.7766
+  Hausdorff Distance: 7.2845
+  NSD: 0.5989
+
+Epoch 30/70:
+  Loss: 5.1843
+  Dice: 0.7798
+  Hausdorff Distance: 6.9010
+  NSD: 0.6031
+
+Epoch 31/70:
+  Loss: 5.2649
+  Dice: 0.7720
+  Hausdorff Distance: 7.4171
+  NSD: 0.5924
+
+Epoch 32/70:
+  Loss: 5.3141
+  Dice: 0.7728
+  Hausdorff Distance: 7.3579
+  NSD: 0.5931
+
+Epoch 33/70:
+  Loss: 5.1381
+  Dice: 0.7809
+  Hausdorff Distance: 6.8295
+  NSD: 0.6035
+
+Epoch 34/70:
+  Loss: 5.2477
+  Dice: 0.7780
+  Hausdorff Distance: 7.0447
+  NSD: 0.6024
+
+Epoch 35/70:
+  Loss: 5.4223
+  Dice: 0.7730
+  Hausdorff Distance: 7.2596
+  NSD: 0.5877
+
+Epoch 36/70:
+  Loss: 5.1144
+  Dice: 0.7801
+  Hausdorff Distance: 7.1365
+  NSD: 0.6112
+
+Epoch 37/70:
+  Loss: 5.1384
+  Dice: 0.7795
+  Hausdorff Distance: 7.0089
+  NSD: 0.6115
+
+Epoch 38/70:
+  Loss: 5.0731
+  Dice: 0.7836
+  Hausdorff Distance: 6.9484
+  NSD: 0.6217
+
+Epoch 39/70:
+  Loss: 5.3756
+  Dice: 0.7666
+  Hausdorff Distance: 7.5258
+  NSD: 0.5821
+
+Epoch 40/70:
+  Loss: 5.2755
+  Dice: 0.7813
+  Hausdorff Distance: 7.1159
+  NSD: 0.6111
+
+Epoch 41/70:
+  Loss: 5.2017
+  Dice: 0.7835
+  Hausdorff Distance: 6.9780
+  NSD: 0.6212
+
+Epoch 42/70:
+  Loss: 5.1889
+  Dice: 0.7800
+  Hausdorff Distance: 6.9343
+  NSD: 0.6117
+
+Epoch 43/70:
+  Loss: 5.2488
+  Dice: 0.7792
+  Hausdorff Distance: 6.9612
+  NSD: 0.6032
+
+Epoch 44/70:
+  Loss: 5.2825
+  Dice: 0.7792
+  Hausdorff Distance: 7.1517
+  NSD: 0.6057
+
+Epoch 45/70:
+  Loss: 5.2814
+  Dice: 0.7810
+  Hausdorff Distance: 6.7736
+  NSD: 0.6156
+
+Epoch 46/70:
+  Loss: 5.2441
+  Dice: 0.7745
+  Hausdorff Distance: 7.1439
+  NSD: 0.6003
+
+Epoch 47/70:
+  Loss: 5.1570
+  Dice: 0.7784
+  Hausdorff Distance: 7.1603
+  NSD: 0.6074
+
+Epoch 48/70:
+  Loss: 5.1224
+  Dice: 0.7769
+  Hausdorff Distance: 7.1803
+  NSD: 0.6092
+
+Epoch 49/70:
+  Loss: 5.2799
+  Dice: 0.7818
+  Hausdorff Distance: 6.9369
+  NSD: 0.6039
+
+Epoch 50/70:
+  Loss: 5.3566
+  Dice: 0.7773
+  Hausdorff Distance: 7.1767
+  NSD: 0.6039
+
+Epoch 51/70:
+  Loss: 5.0825
+  Dice: 0.7880
+  Hausdorff Distance: 6.8297
+  NSD: 0.6212
+
+Epoch 52/70:
+  Loss: 5.0831
+  Dice: 0.7841
+  Hausdorff Distance: 6.8542
+  NSD: 0.6169
+
+Epoch 53/70:
+  Loss: 5.1300
+  Dice: 0.7763
+  Hausdorff Distance: 7.1960
+  NSD: 0.6058
+
+Epoch 54/70:
+  Loss: 5.1465
+  Dice: 0.7746
+  Hausdorff Distance: 7.2993
+  NSD: 0.5967
+
+Epoch 55/70:
+  Loss: 5.0955
+  Dice: 0.7836
+  Hausdorff Distance: 6.8384
+  NSD: 0.6178
+
+Epoch 56/70:
+  Loss: 5.0571
+  Dice: 0.7797
+  Hausdorff Distance: 6.9136
+  NSD: 0.6073
+
+Epoch 57/70:
+  Loss: 5.1238
+  Dice: 0.7807
+  Hausdorff Distance: 6.7581
+  NSD: 0.6063
+
+Epoch 58/70:
+  Loss: 5.0893
+  Dice: 0.7784
+  Hausdorff Distance: 6.9271
+  NSD: 0.6081
+
+Epoch 59/70:
+  Loss: 5.2602
+  Dice: 0.7795
+  Hausdorff Distance: 7.0297
+  NSD: 0.6070
+
+Epoch 60/70:
+  Loss: 5.1593
+  Dice: 0.7760
+  Hausdorff Distance: 7.0744
+  NSD: 0.6025
+
+Epoch 61/70:
+  Loss: 5.1175
+  Dice: 0.7861
+  Hausdorff Distance: 6.6812
+  NSD: 0.6196
+
+Epoch 62/70:
+  Loss: 5.3135
+  Dice: 0.7789
+  Hausdorff Distance: 7.1214
+  NSD: 0.6082
+
+Epoch 63/70:
+  Loss: 4.9827
+  Dice: 0.7890
+  Hausdorff Distance: 6.6353
+  NSD: 0.6234
+
+Epoch 64/70:
+  Loss: 5.0778
+  Dice: 0.7867
+  Hausdorff Distance: 6.8370
+  NSD: 0.6253
+
+Epoch 65/70:
+  Loss: 5.1064
+  Dice: 0.7792
+  Hausdorff Distance: 7.2058
+  NSD: 0.6120
+
+Epoch 66/70:
+  Loss: 5.1594
+  Dice: 0.7785
+  Hausdorff Distance: 7.1381
+  NSD: 0.5954
+
+Epoch 67/70:
+  Loss: 5.3059
+  Dice: 0.7820
+  Hausdorff Distance: 6.9178
+  NSD: 0.6076
+
+Epoch 68/70:
+  Loss: 5.0950
+  Dice: 0.7799
+  Hausdorff Distance: 7.2518
+  NSD: 0.6094
+
+Epoch 69/70:
+  Loss: 5.1666
+  Dice: 0.7802
+  Hausdorff Distance: 6.8666
+  NSD: 0.6050
+
+Epoch 70/70:
+  Loss: 5.0033
+  Dice: 0.7834
+  Hausdorff Distance: 6.9422
+  NSD: 0.6238
+
+Training finished! Final model saved.

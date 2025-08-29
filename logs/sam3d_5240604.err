@@ -1,0 +1,22 @@
+Epoch 0:   0%|          | 0/60 [00:00<?, ?it/s]Epoch 0:   0%|          | 0/60 [00:08<?, ?it/s]
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 640, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 596, in main
+    trainer.train()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 507, in train
+    epoch_loss, epoch_dice, epoch_hd, epoch_nsd, epoch_dice_loss, epoch_ce_loss = self.train_epoch(epoch, np.random.randint(1, 21))
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 421, in train_epoch
+    for step, data3D in enumerate(tbar):
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/prefetch_generator/__init__.py", line 112, in next
+    success, next_item = self.queue.get()
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/queue.py", line 171, in get
+    self.not_empty.wait()
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/threading.py", line 320, in wait
+    waiter.acquire()
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 2314757) is killed by signal: Killed. 
+slurmstepd: error: Detected 1 oom_kill event in StepId=5240604.batch. Some of the step tasks have been OOM Killed.

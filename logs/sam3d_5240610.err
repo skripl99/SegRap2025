@@ -1,0 +1,13 @@
+Epoch 0:   0%|          | 0/120 [00:00<?, ?it/s]Epoch 0:   0%|          | 0/120 [00:09<?, ?it/s]
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 650, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 606, in main
+    trainer.train()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 517, in train
+    epoch_loss, epoch_dice, epoch_hd, epoch_nsd, epoch_dice_loss, epoch_ce_loss = self.train_epoch(epoch, np.random.randint(1, 21))
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 452, in train_epoch
+    prev_masks, loss, dice_loss, ce_loss = self.interaction(
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 353, in interaction
+    assert pred_probs.shape == gt_onehot.shape, \
+AssertionError: Shape mismatch: pred torch.Size([1, 1, 128, 128, 128]) vs target torch.Size([1, 3, 128, 128, 128])

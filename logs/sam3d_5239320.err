@@ -1,0 +1,4 @@
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 526
+    print(f"Validation error: {str(e)")
+                                      ^
+SyntaxError: f-string: expecting '}'

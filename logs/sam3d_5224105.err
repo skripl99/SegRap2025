@@ -1,0 +1,8 @@
+/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+0it [00:00, ?it/s]0it [00:17, ?it/s]
+Val Inference Epoch 120:   0%|          | 0/20 [00:00<?, ?it/s]Val Inference Epoch 120:   0%|          | 0/20 [00:02<?, ?it/s]
+[rank0]:[W712 16:16:48.604471917 ProcessGroupNCCL.cpp:1479] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+slurmstepd: error: *** JOB 5224105 ON mcml-dgx-008 CANCELLED AT 2025-07-12T16:24:05 ***

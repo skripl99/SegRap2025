@@ -1,0 +1,12 @@
+usage: train.py [-h] [--task_name TASK_NAME] [--click_type CLICK_TYPE]
+                [--multi_click] [--model_type MODEL_TYPE]
+                [--checkpoint CHECKPOINT] [--device DEVICE]
+                [--work_dir WORK_DIR] [--num_workers NUM_WORKERS]
+                [--gpu_ids GPU_IDS [GPU_IDS ...]] [--multi_gpu] [--resume]
+                [--allow_partial_weight] [--lr_scheduler LR_SCHEDULER]
+                [--step_size STEP_SIZE] [--gamma GAMMA]
+                [--num_epochs NUM_EPOCHS] [--img_size IMG_SIZE]
+                [--batch_size BATCH_SIZE]
+                [--accumulation_steps ACCUMULATION_STEPS] [--lr LR]
+                [--weight_decay WEIGHT_DECAY] [--port PORT]
+train.py: error: unrecognized arguments: --T_0 50

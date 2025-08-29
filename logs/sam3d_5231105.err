@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 548, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 506, in main
+    trainer = BaseTrainer(model, dataloaders, args)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 126, in __init__
+    self.set_lr_scheduler()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 172, in set_lr_scheduler
+    self.lr_scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(
+TypeError: CosineAnnealingWarmRestarts.__init__() missing 1 required positional argument: 'T_0'

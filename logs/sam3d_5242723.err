@@ -1,0 +1,4 @@
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 104
+    tio.Lambda(lambda x: torch.where(x == 2, 1, x)))  # Klasse 2 → 1
+                                                   ^
+SyntaxError: positional argument follows keyword argument

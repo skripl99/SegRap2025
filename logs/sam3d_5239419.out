@@ -1,0 +1,10 @@
+
+ DEBUG MODE AKTIVIERT
+Device: cuda, GPUs: [0, 1]
+Initial Learning Rate: 4e-05
+
+🔍 Test Dice Loss: 0.44640427827835083
+🔍 Test CE Loss: 2.9110288619995117
+
+Loaded checkpoint from ckpt/sam_med3d_turbo.pth (epoch 0)
+Epoch: 0/199

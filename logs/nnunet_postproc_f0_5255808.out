@@ -1,0 +1,19 @@
+
+***All results:***
+nnUNetTrainer__nnUNetPlans__3d_fullres: 0.743214716816263
+
+*Best*: nnUNetTrainer__nnUNetPlans__3d_fullres: 0.743214716816263
+
+***Determining postprocessing for best model/ensemble***
+WARNING: Not all files in folder_ref were found in folder_predictions. Determining postprocessing should always be done on the entire dataset!
+Removing all but the largest foreground region did not improve results!
+Results were improved by removing all but the largest component for 1. Dice before: 0.78372 after: 0.78403
+Removing all but the largest component for 2 did not improve results! Dice before: 0.70271 after: 0.52326
+
+***Run inference like this:***
+
+nnUNetv2_predict -d Dataset201_SegRap2025Task1 -i INPUT_FOLDER -o OUTPUT_FOLDER -f  0 -tr nnUNetTrainer -c 3d_fullres -p nnUNetPlans
+
+***Once inference is completed, run postprocessing like this:***
+
+nnUNetv2_apply_postprocessing -i OUTPUT_FOLDER -o OUTPUT_FOLDER_PP -pp_pkl_file /dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_data/nnUNet_results/Dataset201_SegRap2025Task1/nnUNetTrainer__nnUNetPlans__3d_fullres/crossval_results_folds_0/postprocessing.pkl -np 8 -plans_json /dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_data/nnUNet_results/Dataset201_SegRap2025Task1/nnUNetTrainer__nnUNetPlans__3d_fullres/crossval_results_folds_0/plans.json

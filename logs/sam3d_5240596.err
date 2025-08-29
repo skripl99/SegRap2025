@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 640, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 592, in main
+    train_loader = get_dataloaders(args)  # Kein val_loader mehr
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 111, in get_dataloaders
+    train_dataset = Dataset_Union_ALL(
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/utils/data_loader.py", line 36, in __init__
+    self._set_file_paths(self.paths)
+AttributeError: 'Dataset_Union_ALL' object has no attribute '_set_file_paths'

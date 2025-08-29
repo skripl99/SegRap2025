@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 656, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 610, in main
+    trainer = BaseTrainer(model, train_loader, args)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 164, in __init__
+    self.init_checkpoint(self.args.checkpoint)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 258, in init_checkpoint
+    self.model.load_state_dict(last_ckpt['model_state_dict'])
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2581, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for Sam3D:
+	size mismatch for prompt_encoder.mask_downscaling.0.weight: copying a param with shape torch.Size([4, 1, 2, 2, 2]) from checkpoint, the shape in current model is torch.Size([4, 3, 2, 2, 2]).
+	size mismatch for mask_decoder.output_hypernetworks_mlps.0.layers.2.weight: copying a param with shape torch.Size([48, 384]) from checkpoint, the shape in current model is torch.Size([3, 384]).
+	size mismatch for mask_decoder.output_hypernetworks_mlps.0.layers.2.bias: copying a param with shape torch.Size([48]) from checkpoint, the shape in current model is torch.Size([3]).
+	size mismatch for mask_decoder.output_hypernetworks_mlps.1.layers.2.weight: copying a param with shape torch.Size([48, 384]) from checkpoint, the shape in current model is torch.Size([3, 384]).
+	size mismatch for mask_decoder.output_hypernetworks_mlps.1.layers.2.bias: copying a param with shape torch.Size([48]) from checkpoint, the shape in current model is torch.Size([3]).
+	size mismatch for mask_decoder.output_hypernetworks_mlps.2.layers.2.weight: copying a param with shape torch.Size([48, 384]) from checkpoint, the shape in current model is torch.Size([3, 384]).
+	size mismatch for mask_decoder.output_hypernetworks_mlps.2.layers.2.bias: copying a param with shape torch.Size([48]) from checkpoint, the shape in current model is torch.Size([3]).
+	size mismatch for mask_decoder.output_hypernetworks_mlps.3.layers.2.weight: copying a param with shape torch.Size([48, 384]) from checkpoint, the shape in current model is torch.Size([3, 384]).
+	size mismatch for mask_decoder.output_hypernetworks_mlps.3.layers.2.bias: copying a param with shape torch.Size([48]) from checkpoint, the shape in current model is torch.Size([3]).

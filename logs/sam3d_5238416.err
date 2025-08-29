@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 748, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 681, in main
+    transform=tio.Compose([...]),  # Ihre bestehenden Transforms
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sammed3d/lib/python3.10/site-packages/torchio/transforms/augmentation/composition.py", line 35, in __init__
+    raise TypeError(message)
+TypeError: One or more of the objects passed to the Compose transform are not callable: "Ellipsis"

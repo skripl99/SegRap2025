@@ -1,0 +1,19 @@
+
+############################
+INFO: You are using the old nnU-Net default plans. We have updated our recommendations. Please consider using those instead! Read more here: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/resenc_presets.md
+############################
+
+Using device: cuda:0
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+
+2025-07-28 14:02:33.141466: Using torch.compile...
+2025-07-28 14:02:36.010807: do_dummy_2d_data_aug: True
+2025-07-28 14:02:36.011651: Using splits from existing split file: /dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_data/nnUNet_preprocessed/Dataset201_SegRap2025Task1/splits_final.json
+2025-07-28 14:02:36.011971: The split file contains 5 splits.
+2025-07-28 14:02:36.012081: Desired fold for training: 1
+2025-07-28 14:02:36.012176: This split has 95 training and 24 validation cases.
+using pin_memory on device 0

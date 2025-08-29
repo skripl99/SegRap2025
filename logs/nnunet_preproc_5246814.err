@@ -1,0 +1,73 @@
++ source /dss/dsshome1/0D/ru47tac2/miniconda3/etc/profile.d/conda.sh
+++ export CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
+++ CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
+++ '[' -z x ']'
++ conda init
++ local cmd=init
++ case "$cmd" in
++ __conda_exe init
++ '[' -n '' ']'
++ /dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda init
++ conda activate nnunetv2
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate nnunetv2
++ '[' -n '' ']'
++ local ask_conda
+++ PS1=
+++ __conda_exe shell.posix activate nnunetv2
+++ '[' -n '' ']'
+++ /dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda shell.posix activate nnunetv2
++ ask_conda='unset _CE_M
+unset _CE_CONDA
+PS1='\''(nnunetv2) '\''
+export PATH='\''/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_PROMPT_MODIFIER='\''(nnunetv2) '\''
+export CONDA_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python'\'''
++ eval 'unset _CE_M
+unset _CE_CONDA
+PS1='\''(nnunetv2) '\''
+export PATH='\''/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_PROMPT_MODIFIER='\''(nnunetv2) '\''
+export CONDA_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python'\'''
+++ unset _CE_M
+++ unset _CE_CONDA
+++ PS1='(nnunetv2) '
+++ export PATH=/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ PATH=/dss/dsshome1/0D/ru47tac2/.vscode-server/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/remote-cli:/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin:/dss/dsshome1/0D/ru47tac2/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ export CONDA_SHLVL=2
+++ CONDA_SHLVL=2
+++ export 'CONDA_PROMPT_MODIFIER=(nnunetv2) '
+++ CONDA_PROMPT_MODIFIER='(nnunetv2) '
+++ export CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
+++ CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
+++ export CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ nnUNetv2_plan_and_preprocess -d 201 -c 3d_fullres -np 1 --verify_dataset_integrity
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin/nnUNetv2_plan_and_preprocess", line 8, in <module>
+    sys.exit(plan_and_preprocess_entry())
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_repo/nnunetv2/experiment_planning/plan_and_preprocess_entrypoints.py", line 180, in plan_and_preprocess_entry
+    extract_fingerprints(args.d, args.fpe, args.npfp, args.verify_dataset_integrity, args.clean, args.verbose)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_repo/nnunetv2/experiment_planning/plan_and_preprocess_api.py", line 47, in extract_fingerprints
+    extract_fingerprint_dataset(d, fingerprint_extractor_class, num_processes, check_dataset_integrity, clean,
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_repo/nnunetv2/experiment_planning/plan_and_preprocess_api.py", line 30, in extract_fingerprint_dataset
+    verify_dataset_integrity(join(nnUNet_raw, dataset_name), num_processes)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_repo/nnunetv2/experiment_planning/verify_dataset_integrity.py", line 152, in verify_dataset_integrity
+    assert len(dataset) == expected_num_training, 'Did not find the expected number of training cases ' \
+AssertionError: Did not find the expected number of training cases (120). Found 119 instead.
+Examples: [np.str_('segrap_0000'), np.str_('segrap_0001'), np.str_('segrap_0002'), np.str_('segrap_0003'), np.str_('segrap_0004')]

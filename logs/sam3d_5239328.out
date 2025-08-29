@@ -1,0 +1,110 @@
+
+ DEBUG MODE AKTIVIERT
+Device: cuda, GPUs: [0, 1]
+Initial Learning Rate: 4e-05
+
+🔍 Test Dice Loss: 0.44640427827835083
+🔍 Test CE Loss: 2.9110288619995117
+
+Loaded checkpoint from ckpt/sam_med3d_turbo.pth (epoch 0)
+Epoch: 0/199
+Unique GT values before norm: tensor([  0., 255.], device='cuda:0')
+GT nach Norm: min=0.000, max=1.000
+
+=== NEW INTERACTION (clicks: 11) ===
+Initial GT sum: 272320.0
+
+ batch_forward - Input Shapes:
+Image Embedding: torch.Size([2, 384, 8, 8, 8])
+GT3D unique values: tensor([0., 1.], device='cuda:0')
+Raw masks min/max: -14.266, 5.949
+Final prev_masks sum: -17126976.000, GT sum: 272320.000
+
+
+=== DEBUG METRICS ===
+TP: 13481.0, FP: 59302.0, FN: 258839.0
+Precision: 0.185 | Recall: 0.050
+GT Foreground %: 6.49%
+Pred Foreground %: 1.74%
+
+Dice Loss: 0.886168, CE Loss: 2.298975, Total: 3.185143
+
+ batch_forward - Input Shapes:
+Image Embedding: torch.Size([2, 384, 8, 8, 8])
+GT3D unique values: tensor([0., 1.], device='cuda:0')
+Raw masks min/max: -12.539, 6.668
+Final prev_masks sum: -14918574.000, GT sum: 272320.000
+
+Dice Loss: 0.818210, CE Loss: 1.577582, Total: 2.395792
+
+ batch_forward - Input Shapes:
+Image Embedding: torch.Size([2, 384, 8, 8, 8])
+GT3D unique values: tensor([0., 1.], device='cuda:0')
+Raw masks min/max: -10.133, 6.070
+Final prev_masks sum: -12470208.000, GT sum: 272320.000
+
+Dice Loss: 0.754010, CE Loss: 1.145939, Total: 1.899948
+
+ batch_forward - Input Shapes:
+Image Embedding: torch.Size([2, 384, 8, 8, 8])
+GT3D unique values: tensor([0., 1.], device='cuda:0')
+Raw masks min/max: -8.820, 7.352
+Final prev_masks sum: -10800626.000, GT sum: 272320.000
+
+Dice Loss: 0.720802, CE Loss: 1.025320, Total: 1.746122
+
+ batch_forward - Input Shapes:
+Image Embedding: torch.Size([2, 384, 8, 8, 8])
+GT3D unique values: tensor([0., 1.], device='cuda:0')
+Raw masks min/max: -11.102, 3.660
+Final prev_masks sum: -14402526.000, GT sum: 272320.000
+
+Dice Loss: 0.714119, CE Loss: 1.068549, Total: 1.782667
+
+ batch_forward - Input Shapes:
+Image Embedding: torch.Size([2, 384, 8, 8, 8])
+GT3D unique values: tensor([0., 1.], device='cuda:0')
+Raw masks min/max: -13.133, 6.391
+Final prev_masks sum: -13798666.000, GT sum: 272320.000
+
+Dice Loss: 0.688099, CE Loss: 0.891496, Total: 1.579595
+
+ batch_forward - Input Shapes:
+Image Embedding: torch.Size([2, 384, 8, 8, 8])
+GT3D unique values: tensor([0., 1.], device='cuda:0')
+Raw masks min/max: -10.117, 4.262
+Final prev_masks sum: -13012852.000, GT sum: 272320.000
+
+Dice Loss: 0.685974, CE Loss: 0.832818, Total: 1.518792
+
+ batch_forward - Input Shapes:
+Image Embedding: torch.Size([2, 384, 8, 8, 8])
+GT3D unique values: tensor([0., 1.], device='cuda:0')
+Raw masks min/max: -16.344, 6.902
+Final prev_masks sum: -16286080.000, GT sum: 272320.000
+
+Dice Loss: 0.679821, CE Loss: 0.905093, Total: 1.584915
+
+ batch_forward - Input Shapes:
+Image Embedding: torch.Size([2, 384, 8, 8, 8])
+GT3D unique values: tensor([0., 1.], device='cuda:0')
+Raw masks min/max: -13.695, 4.629
+Final prev_masks sum: -16046502.000, GT sum: 272320.000
+
+Dice Loss: 0.672706, CE Loss: 0.879409, Total: 1.552115
+
+ batch_forward - Input Shapes:
+Image Embedding: torch.Size([2, 384, 8, 8, 8])
+GT3D unique values: tensor([0., 1.], device='cuda:0')
+Raw masks min/max: -14.391, 3.703
+Final prev_masks sum: -17314704.000, GT sum: 272320.000
+
+Dice Loss: 0.683633, CE Loss: 0.945189, Total: 1.628821
+
+ batch_forward - Input Shapes:
+Image Embedding: torch.Size([2, 384, 8, 8, 8])
+GT3D unique values: tensor([0., 1.], device='cuda:0')
+Raw masks min/max: -14.352, 4.957
+Final prev_masks sum: -16191430.000, GT sum: 272320.000
+
+Dice Loss: 0.687924, CE Loss: 0.892892, Total: 1.580816

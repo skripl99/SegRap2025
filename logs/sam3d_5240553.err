@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 602, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 556, in main
+    trainer = BaseTrainer(model, train_loader, args)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 136, in __init__
+    self.set_loss_fn()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 157, in set_loss_fn
+    self.loss_fn = DiceCELoss(
+TypeError: DiceCELoss.__init__() got an unexpected keyword argument 'num_classes'

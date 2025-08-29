@@ -1,0 +1,12 @@
++ source /dss/dsshome1/0D/ru47tac2/miniconda3/etc/profile.d/conda.sh
+++ export CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
+++ CONDA_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/dss/dsshome1/0D/ru47tac2/miniconda3/bin/python
+++ '[' -z x ']'
++ source activate nnunetv2
+/var/lib/slurm-llnl/slurmd/job5244858/slurm_script: line 18: activate: No such file or directory

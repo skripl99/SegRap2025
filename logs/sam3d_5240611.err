@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 94, in <module>
+    model = build_model(args)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 80, in build_model
+    original_conv = sam_model.mask_decoder.output_hypernetworks_mlps[0][-1]
+TypeError: 'MLP' object is not subscriptable

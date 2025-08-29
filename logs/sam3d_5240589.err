@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 25, in <module>
+    from utils.data_loader import Dataset_Union_ALL, Union_Dataloader
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/utils/data_loader.py", line 79
+    return self.__getitem__(np.random.randint(self.__len__())
+                           ^
+SyntaxError: '(' was never closed

@@ -1,0 +1,11 @@
+/var/lib/slurm-llnl/slurmd/job5244590/slurm_script: line 14: activate: No such file or directory
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/nnunetv2/bin/nnUNetv2_plan_and_preprocess", line 8, in <module>
+    sys.exit(plan_and_preprocess_entry())
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_repo/nnunetv2/experiment_planning/plan_and_preprocess_entrypoints.py", line 196, in plan_and_preprocess_entry
+    preprocess(args.d, plans_identifier, args.c, np, args.verbose)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_repo/nnunetv2/experiment_planning/plan_and_preprocess_api.py", line 150, in preprocess
+    preprocess_dataset(d, plans_identifier, configurations, num_processes, verbose)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_repo/nnunetv2/experiment_planning/plan_and_preprocess_api.py", line 110, in preprocess_dataset
+    raise RuntimeError(
+RuntimeError: The list provided with num_processes must either have len 1 or as many elements as there are configurations (see --help). Number of configurations: 1, length of num_processes: 3

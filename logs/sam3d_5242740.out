@@ -1,0 +1,36 @@
+
+=== Starting Training ===
+Model: vit_b_ori
+Batch size: 1
+Initial LR: 4e-05
+Training samples: 1
+
+Original mask_in_chans: Nicht vorhanden
+Re-initialisiert: torch.Size([0, 1, 2, 2, 2])
+Re-initialisiert: torch.Size([3, 0, 2, 2, 2])
+Re-initialisiert: torch.Size([384, 3, 1, 1, 1])
+Skipping prompt_encoder.mask_downscaling.0.weight due to shape mismatch: torch.Size([4, 1, 2, 2, 2]) vs torch.Size([0, 1, 2, 2, 2])
+Skipping prompt_encoder.mask_downscaling.0.bias due to shape mismatch: torch.Size([4]) vs torch.Size([0])
+Skipping prompt_encoder.mask_downscaling.1.weight due to shape mismatch: torch.Size([4]) vs torch.Size([0])
+Skipping prompt_encoder.mask_downscaling.1.bias due to shape mismatch: torch.Size([4]) vs torch.Size([0])
+Skipping prompt_encoder.mask_downscaling.3.weight due to shape mismatch: torch.Size([16, 4, 2, 2, 2]) vs torch.Size([3, 0, 2, 2, 2])
+Skipping prompt_encoder.mask_downscaling.3.bias due to shape mismatch: torch.Size([16]) vs torch.Size([3])
+Skipping prompt_encoder.mask_downscaling.4.weight due to shape mismatch: torch.Size([16]) vs torch.Size([3])
+Skipping prompt_encoder.mask_downscaling.4.bias due to shape mismatch: torch.Size([16]) vs torch.Size([3])
+Skipping prompt_encoder.mask_downscaling.6.weight due to shape mismatch: torch.Size([384, 16, 1, 1, 1]) vs torch.Size([384, 3, 1, 1, 1])
+Skipping mask_decoder.mask_tokens.weight due to shape mismatch: torch.Size([4, 384]) vs torch.Size([2, 384])
+Skipping mask_decoder.output_hypernetworks_mlps.2.layers.0.weight not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.2.layers.0.bias not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.2.layers.1.weight not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.2.layers.1.bias not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.2.layers.2.weight not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.2.layers.2.bias not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.3.layers.0.weight not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.3.layers.0.bias not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.3.layers.1.weight not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.3.layers.1.bias not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.3.layers.2.weight not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.3.layers.2.bias not found in current model
+Skipping mask_decoder.iou_prediction_head.layers.2.weight due to shape mismatch: torch.Size([4, 256]) vs torch.Size([2, 256])
+Skipping mask_decoder.iou_prediction_head.layers.2.bias due to shape mismatch: torch.Size([4]) vs torch.Size([2])
+Loaded checkpoint from ckpt/sam_med3d_turbo.pth (epoch 0)

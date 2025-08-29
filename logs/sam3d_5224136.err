@@ -1,0 +1,43 @@
+/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+  0%|          | 0/10 [00:00<?, ?it/s]  0%|          | 0/10 [00:33<?, ?it/s]
+[rank0]:[W712 16:45:35.669714402 ProcessGroupNCCL.cpp:1479] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0712 16:45:37.144000 1825548 site-packages/torch/multiprocessing/spawn.py:169] Terminating process 1825647 via signal SIGTERM
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 537, in <module>
+    main()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 493, in main
+    mp.spawn(main_worker, nprocs=args.world_size, args=(args, ))
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 340, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 296, in start_processes
+    while not context.join():
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 215, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 90, in _wrap
+    fn(i, *args)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 523, in main_worker
+    trainer.train()
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 424, in train
+    epoch_loss, epoch_iou, epoch_dice, pred_list = self.train_epoch(epoch, num_clicks)
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 321, in train_epoch
+    for step, data3D in enumerate(tbar):
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/site-packages/prefetch_generator/__init__.py", line 112, in next
+    success, next_item = self.queue.get()
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/queue.py", line 171, in get
+    self.not_empty.wait()
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/threading.py", line 320, in wait
+    waiter.acquire()
+  File "/dss/dsshome1/0D/ru47tac2/miniconda3/envs/sam3d/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 1825861) is killed by signal: Killed. 
+
+slurmstepd: error: Detected 2 oom_kill events in StepId=5224136.batch. Some of the step tasks have been OOM Killed.

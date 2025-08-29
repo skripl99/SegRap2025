@@ -1,0 +1,29 @@
+
+=== Starting Training ===
+Model: vit_b_ori
+Batch size: 1
+Initial LR: 4e-05
+Training samples: 1
+
+Lade pre-trained Checkpoint von ckpt/sam_med3d_turbo.pth...
+Erfolgreich 0/1 Parametern geladen
+Skipping mask_decoder.mask_tokens.weight due to shape mismatch: torch.Size([4, 384]) vs torch.Size([2, 384])
+Skipping mask_decoder.output_hypernetworks_mlps.0.layers.2.weight due to shape mismatch: torch.Size([48, 384]) vs torch.Size([3, 384])
+Skipping mask_decoder.output_hypernetworks_mlps.0.layers.2.bias due to shape mismatch: torch.Size([48]) vs torch.Size([3])
+Skipping mask_decoder.output_hypernetworks_mlps.1.layers.2.weight due to shape mismatch: torch.Size([48, 384]) vs torch.Size([3, 384])
+Skipping mask_decoder.output_hypernetworks_mlps.1.layers.2.bias due to shape mismatch: torch.Size([48]) vs torch.Size([3])
+Skipping mask_decoder.output_hypernetworks_mlps.2.layers.0.weight not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.2.layers.0.bias not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.2.layers.1.weight not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.2.layers.1.bias not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.2.layers.2.weight not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.2.layers.2.bias not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.3.layers.0.weight not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.3.layers.0.bias not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.3.layers.1.weight not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.3.layers.1.bias not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.3.layers.2.weight not found in current model
+Skipping mask_decoder.output_hypernetworks_mlps.3.layers.2.bias not found in current model
+Skipping mask_decoder.iou_prediction_head.layers.2.weight due to shape mismatch: torch.Size([4, 256]) vs torch.Size([2, 256])
+Skipping mask_decoder.iou_prediction_head.layers.2.bias due to shape mismatch: torch.Size([4]) vs torch.Size([2])
+Loaded checkpoint from ckpt/sam_med3d_turbo.pth (epoch 0)

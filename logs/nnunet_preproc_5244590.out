@@ -1,0 +1,195 @@
+Fingerprint extraction...
+Dataset201_SegRap2025Task1
+Using <class 'nnunetv2.imageio.simpleitk_reader_writer.SimpleITKIO'> as reader/writer
+
+####################
+verify_dataset_integrity Done. 
+If you didn't see any error messages then your dataset is most likely OK!
+####################
+
+Experiment planning...
+
+############################
+INFO: You are using the old nnU-Net default planner. We have updated our recommendations. Please consider using those instead! Read more here: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/resenc_presets.md
+############################
+
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         0.55825195 0.55825195]. 
+Current patch size: (np.int64(32), np.int64(256), np.int64(224)). 
+Current median shape: [126.        993.2038835 993.2038835]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         0.57499951 0.57499951]. 
+Current patch size: (np.int64(32), np.int64(256), np.int64(224)). 
+Current median shape: [126.         964.27561504 964.27561504]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.        0.5922495 0.5922495]. 
+Current patch size: (np.int64(32), np.int64(256), np.int64(224)). 
+Current median shape: [126.         936.18991752 936.18991752]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         0.61001698 0.61001698]. 
+Current patch size: (np.int64(32), np.int64(256), np.int64(224)). 
+Current median shape: [126.         908.92225002 908.92225002]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         0.62831749 0.62831749]. 
+Current patch size: (np.int64(32), np.int64(256), np.int64(224)). 
+Current median shape: [126.         882.44878642 882.44878642]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         0.64716702 0.64716702]. 
+Current patch size: (np.int64(32), np.int64(256), np.int64(224)). 
+Current median shape: [126.         856.74639459 856.74639459]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         0.66658203 0.66658203]. 
+Current patch size: (np.int64(32), np.int64(256), np.int64(224)). 
+Current median shape: [126.        831.7926161 831.7926161]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         0.68657949 0.68657949]. 
+Current patch size: (np.int64(32), np.int64(256), np.int64(224)). 
+Current median shape: [126.        807.5656467 807.5656467]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         0.70717687 0.70717687]. 
+Current patch size: (np.int64(32), np.int64(224), np.int64(224)). 
+Current median shape: [126.         784.04431719 784.04431719]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         0.72839218 0.72839218]. 
+Current patch size: (np.int64(32), np.int64(224), np.int64(224)). 
+Current median shape: [126.         761.20807494 761.20807494]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         0.75024394 0.75024394]. 
+Current patch size: (np.int64(40), np.int64(224), np.int64(224)). 
+Current median shape: [126.         739.03696596 739.03696596]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         0.77275126 0.77275126]. 
+Current patch size: (np.int64(40), np.int64(224), np.int64(224)). 
+Current median shape: [126.         717.51161744 717.51161744]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.        0.7959338 0.7959338]. 
+Current patch size: (np.int64(40), np.int64(224), np.int64(224)). 
+Current median shape: [126.         696.61322081 696.61322081]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         0.81981181 0.81981181]. 
+Current patch size: (np.int64(40), np.int64(224), np.int64(224)). 
+Current median shape: [126.         676.32351535 676.32351535]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         0.84440617 0.84440617]. 
+Current patch size: (np.int64(40), np.int64(224), np.int64(224)). 
+Current median shape: [126.         656.62477219 656.62477219]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         0.86973835 0.86973835]. 
+Current patch size: (np.int64(40), np.int64(224), np.int64(224)). 
+Current median shape: [126.         637.49977882 637.49977882]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.        0.8958305 0.8958305]. 
+Current patch size: (np.int64(40), np.int64(224), np.int64(224)). 
+Current median shape: [126.        618.9318241 618.9318241]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         0.92270542 0.92270542]. 
+Current patch size: (np.int64(40), np.int64(224), np.int64(224)). 
+Current median shape: [126.         600.90468359 600.90468359]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         0.95038658 0.95038658]. 
+Current patch size: (np.int64(48), np.int64(224), np.int64(192)). 
+Current median shape: [126.         583.40260543 583.40260543]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         0.97889818 0.97889818]. 
+Current patch size: (np.int64(48), np.int64(224), np.int64(192)). 
+Current median shape: [126.         566.41029653 566.41029653]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         1.00826512 1.00826512]. 
+Current patch size: (np.int64(48), np.int64(224), np.int64(192)). 
+Current median shape: [126.         549.91290925 549.91290925]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         1.03851308 1.03851308]. 
+Current patch size: (np.int64(48), np.int64(224), np.int64(192)). 
+Current median shape: [126.        533.8960284 533.8960284]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         1.06966847 1.06966847]. 
+Current patch size: (np.int64(48), np.int64(224), np.int64(192)). 
+Current median shape: [126.         518.34565864 518.34565864]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         1.10175852 1.10175852]. 
+Current patch size: (np.int64(56), np.int64(192), np.int64(192)). 
+Current median shape: [126.         503.24821228 503.24821228]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         1.13481128 1.13481128]. 
+Current patch size: (np.int64(56), np.int64(192), np.int64(192)). 
+Current median shape: [126.         488.59049735 488.59049735]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         1.16885562 1.16885562]. 
+Current patch size: (np.int64(56), np.int64(192), np.int64(192)). 
+Current median shape: [126.         474.35970617 474.35970617]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         1.20392129 1.20392129]. 
+Current patch size: (np.int64(56), np.int64(192), np.int64(192)). 
+Current median shape: [126.         460.54340405 460.54340405]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         1.24003893 1.24003893]. 
+Current patch size: (np.int64(56), np.int64(192), np.int64(192)). 
+Current median shape: [126.         447.12951849 447.12951849]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         1.27724009 1.27724009]. 
+Current patch size: (np.int64(56), np.int64(192), np.int64(192)). 
+Current median shape: [126.         434.10632863 434.10632863]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.        1.3155573 1.3155573]. 
+Current patch size: (np.int64(56), np.int64(192), np.int64(192)). 
+Current median shape: [126.         421.46245498 421.46245498]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         1.35502402 1.35502402]. 
+Current patch size: (np.int64(56), np.int64(192), np.int64(192)). 
+Current median shape: [126.        409.1868495 409.1868495]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         1.39567474 1.39567474]. 
+Current patch size: (np.int64(56), np.int64(192), np.int64(192)). 
+Current median shape: [126.         397.26878592 397.26878592]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         1.43754498 1.43754498]. 
+Current patch size: (np.int64(56), np.int64(192), np.int64(192)). 
+Current median shape: [126.         385.69785041 385.69785041]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         1.48067133 1.48067133]. 
+Current patch size: (np.int64(64), np.int64(192), np.int64(160)). 
+Current median shape: [126.         374.46393244 374.46393244]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.         1.52509147 1.52509147]. 
+Current patch size: (np.int64(64), np.int64(192), np.int64(192)). 
+Current median shape: [126.         363.55721596 363.55721596]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.09       1.57084421 1.57084421]. 
+Current patch size: (np.int64(64), np.int64(192), np.int64(192)). 
+Current median shape: [122.33009709 352.96817083 352.96817083]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.1827     1.61796954 1.61796954]. 
+Current patch size: (np.int64(64), np.int64(192), np.int64(192)). 
+Current median shape: [118.76708455 342.6875445  342.6875445 ]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.278181   1.66650862 1.66650862]. 
+Current patch size: (np.int64(64), np.int64(192), np.int64(192)). 
+Current median shape: [115.30784908 332.70635388 332.70635388]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.37652643 1.71650388 1.71650388]. 
+Current patch size: (np.int64(64), np.int64(192), np.int64(192)). 
+Current median shape: [111.94936804 323.01587755 323.01587755]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.47782222 1.767999   1.767999  ]. 
+Current patch size: (np.int64(64), np.int64(192), np.int64(192)). 
+Current median shape: [108.68870683 313.60764811 313.60764811]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.58215689 1.82103897 1.82103897]. 
+Current patch size: (np.int64(64), np.int64(192), np.int64(192)). 
+Current median shape: [105.52301634 304.47344477 304.47344477]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.6896216  1.87567014 1.87567014]. 
+Current patch size: (np.int64(64), np.int64(192), np.int64(192)). 
+Current median shape: [102.44953043 295.60528618 295.60528618]
+2D U-Net configuration:
+{'data_identifier': 'nnUNetPlans_2d', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 3, 'patch_size': (np.int64(1024), np.int64(1024)), 'median_image_size_in_voxels': array([1023., 1023.]), 'spacing': array([0.54199219, 0.54199219]), 'normalization_schemes': ['CTNormalization'], 'use_mask_for_norm': [False], 'resampling_fn_data': 'resample_data_or_seg_to_shape', 'resampling_fn_seg': 'resample_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'resample_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'architecture': {'network_class_name': 'dynamic_network_architectures.architectures.unet.PlainConvUNet', 'arch_kwargs': {'n_stages': 9, 'features_per_stage': (32, 64, 128, 256, 512, 512, 512, 512, 512), 'conv_op': 'torch.nn.modules.conv.Conv2d', 'kernel_sizes': ((3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3)), 'strides': ((1, 1), (2, 2), (2, 2), (2, 2), (2, 2), (2, 2), (2, 2), (2, 2), (2, 2)), 'n_conv_per_stage': (2, 2, 2, 2, 2, 2, 2, 2, 2), 'n_conv_per_stage_decoder': (2, 2, 2, 2, 2, 2, 2, 2), 'conv_bias': True, 'norm_op': 'torch.nn.modules.instancenorm.InstanceNorm2d', 'norm_op_kwargs': {'eps': 1e-05, 'affine': True}, 'dropout_op': None, 'dropout_op_kwargs': None, 'nonlin': 'torch.nn.LeakyReLU', 'nonlin_kwargs': {'inplace': True}}, '_kw_requires_import': ('conv_op', 'norm_op', 'dropout_op', 'nonlin')}, 'batch_dice': True}
+
+Using <class 'nnunetv2.imageio.simpleitk_reader_writer.SimpleITKIO'> as reader/writer
+3D lowres U-Net configuration:
+{'data_identifier': 'nnUNetPlans_3d_lowres', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 2, 'patch_size': (np.int64(64), np.int64(192), np.int64(192)), 'median_image_size_in_voxels': (102, 296, 296), 'spacing': array([3.6896216 , 1.87567014, 1.87567014]), 'normalization_schemes': ['CTNormalization'], 'use_mask_for_norm': [False], 'resampling_fn_data': 'resample_data_or_seg_to_shape', 'resampling_fn_seg': 'resample_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'resample_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'architecture': {'network_class_name': 'dynamic_network_architectures.architectures.unet.PlainConvUNet', 'arch_kwargs': {'n_stages': 6, 'features_per_stage': (32, 64, 128, 256, 320, 320), 'conv_op': 'torch.nn.modules.conv.Conv3d', 'kernel_sizes': ((3, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3)), 'strides': ((1, 1, 1), (2, 2, 2), (2, 2, 2), (2, 2, 2), (2, 2, 2), (1, 2, 2)), 'n_conv_per_stage': (2, 2, 2, 2, 2, 2), 'n_conv_per_stage_decoder': (2, 2, 2, 2, 2), 'conv_bias': True, 'norm_op': 'torch.nn.modules.instancenorm.InstanceNorm3d', 'norm_op_kwargs': {'eps': 1e-05, 'affine': True}, 'dropout_op': None, 'dropout_op_kwargs': None, 'nonlin': 'torch.nn.LeakyReLU', 'nonlin_kwargs': {'inplace': True}}, '_kw_requires_import': ('conv_op', 'norm_op', 'dropout_op', 'nonlin')}, 'batch_dice': False, 'next_stage': '3d_cascade_fullres'}
+
+3D fullres U-Net configuration:
+{'data_identifier': 'nnUNetPlans_3d_fullres', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 2, 'patch_size': (np.int64(28), np.int64(256), np.int64(256)), 'median_image_size_in_voxels': array([ 126., 1023., 1023.]), 'spacing': array([3.        , 0.54199219, 0.54199219]), 'normalization_schemes': ['CTNormalization'], 'use_mask_for_norm': [False], 'resampling_fn_data': 'resample_data_or_seg_to_shape', 'resampling_fn_seg': 'resample_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'resample_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'architecture': {'network_class_name': 'dynamic_network_architectures.architectures.unet.PlainConvUNet', 'arch_kwargs': {'n_stages': 7, 'features_per_stage': (32, 64, 128, 256, 320, 320, 320), 'conv_op': 'torch.nn.modules.conv.Conv3d', 'kernel_sizes': ((1, 3, 3), (1, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3)), 'strides': ((1, 1, 1), (1, 2, 2), (1, 2, 2), (2, 2, 2), (2, 2, 2), (1, 2, 2), (1, 2, 2)), 'n_conv_per_stage': (2, 2, 2, 2, 2, 2, 2), 'n_conv_per_stage_decoder': (2, 2, 2, 2, 2, 2), 'conv_bias': True, 'norm_op': 'torch.nn.modules.instancenorm.InstanceNorm3d', 'norm_op_kwargs': {'eps': 1e-05, 'affine': True}, 'dropout_op': None, 'dropout_op_kwargs': None, 'nonlin': 'torch.nn.LeakyReLU', 'nonlin_kwargs': {'inplace': True}}, '_kw_requires_import': ('conv_op', 'norm_op', 'dropout_op', 'nonlin')}, 'batch_dice': True}
+
+Plans were saved to /dss/dsshome1/0D/ru47tac2/projects/segrap2025/nnunet_data/nnUNet_preprocessed/Dataset201_SegRap2025Task1/nnUNetPlans.json
+Preprocessing...

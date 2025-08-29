@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/dss/dsshome1/0D/ru47tac2/projects/segrap2025/SAM-Med3D/train.py", line 27, in <module>
+    from sklearn.model_selection import KFold
+ModuleNotFoundError: No module named 'sklearn'
