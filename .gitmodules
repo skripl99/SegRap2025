@@ -1,0 +1,3 @@
+[submodule "SegRap2025_Docker2"]
+	path = SegRap2025_Docker2
+	url = https://github.com/HiLab-git/SegRap2025_Docker.git
